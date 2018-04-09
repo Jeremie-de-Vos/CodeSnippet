@@ -1,0 +1,34 @@
+
+
+add new Project
+
+file system:
+- Dubble click		[edit file name]
+- Right Click		[show option menu Add: file, collection, snipped]
+
+
+
+
+
+save entire files to sql database
+https://social.msdn.microsoft.com/Forums/en-US/b818de10-9dbb-4ca4-9c31-8f3305713eee/how-to-save-and-get-files-in-database-with-cnet?forum=Vsexpressvcs
+
+
+Create sulotion programmaticly
+
+down vote
+Tested and working using .NET4 Winforms, and a reference to EnvDTE100.dll (which should also add references to EnvDTE90.dll, EnvDTE80.dll, and EnvDTE.dll)
+
+Type type = Type.GetTypeFromProgID("VisualStudio.DTE.11.0");
+Object obj = System.Activator.CreateInstance(type, true);
+EnvDTE80.DTE2 dte = (EnvDTE80.DTE2)obj;
+EnvDTE100.Solution4 _solution = (EnvDTE100.Solution4)dte.Solution;
+_solution.Create(@"C:\Test\", "Test");
+_solution.SaveAs(@"C:\Test\Test.sln");
+shareimprove this answer
+answered Jan 2 '14 at 22:27
+
+Xenolightning
+3,1131827
+Add the reference to EnvDTE via NuGet. Then you have no trouble with dependencies. – MarkoW Oct 14 '16 at 19:06 
+add a comment

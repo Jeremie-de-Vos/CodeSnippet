@@ -1,0 +1,6 @@
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Release\MyCodeSnipped.csprojResolveAssemblyReference.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Release\Resources\General\LoginRegister\Windows\Login.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Release\MainWindow.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Release\App.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Release\MyCodeSnipped_MarkupCompile.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Release\MyCodeSnipped_MarkupCompile.lref

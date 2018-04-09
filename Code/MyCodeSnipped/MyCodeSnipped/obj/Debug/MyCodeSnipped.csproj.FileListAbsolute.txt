@@ -1,0 +1,52 @@
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MainWindow.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\App.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped_MarkupCompile.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped_MarkupCompile.lref
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.exe.config
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.exe
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.pdb
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MySql.Data.dll
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MySql.Data.xml
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\LoginRegister\Windows\LoginWindow.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MainWindow.baml
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\LoginRegister\Windows\LoginWindow.baml
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.g.resources
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.Properties.Resources.resources
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csproj.GenerateResource.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csproj.CoreCompileInputs.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csproj.CopyComplete
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.exe
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.pdb
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\LoginRegister\Windows\RegisterWindow.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\LoginRegister\Windows\RegisterWindow.baml
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\AddDatabase.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\AddDatabase.baml
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csprojResolveAssemblyReference.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\Pages\Database.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\Pages\Database.baml
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.exe.config
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.exe
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.pdb
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MySql.Data.dll
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MySql.Data.xml
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csprojResolveAssemblyReference.cache
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MainWindow.g.cs
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\AddDatabase.g.cs
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\LoginRegister\Windows\LoginWindow.g.cs
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\LoginRegister\Windows\RegisterWindow.g.cs
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\Pages\Database.g.cs
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\App.g.cs
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped_MarkupCompile.cache
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped_MarkupCompile.lref
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MainWindow.baml
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\AddDatabase.baml
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\LoginRegister\Windows\LoginWindow.baml
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\General\LoginRegister\Windows\RegisterWindow.baml
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\Resources\Pages\Database.baml
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.g.resources
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.Properties.Resources.resources
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csproj.GenerateResource.cache
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csproj.CoreCompileInputs.cache
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csproj.CopyComplete
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.exe
+D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.pdb

@@ -1,0 +1,245 @@
+﻿<Window x:Class="MyCodeSnipped.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyCodeSnipped"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="960" Width="1452">
+
+    <!-- Main-->
+    <Grid Background="#FF252323">
+        <!--Side Menu-->
+        <WrapPanel HorizontalAlignment="Left" Margin="0,0,0,0.4" Width="200" Background="#FF4B4747">
+            <Grid Height="196" Width="201" Background="#FF525252">
+                <Image Name="ProfileImage" Margin="49,37,52,72"  RenderTransformOrigin="0.006,0.477"/>
+                <Button x:Name="EditProfile_Btn" Content="Edit" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black"  Margin="157,0,0,169" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="EditProfile_Btn_Click"/>
+                <Label x:Name="FullName_Lbl" Content="Jeremie de Vos" HorizontalAlignment="Left" Margin="0,124,0,0" VerticalAlignment="Top" Width="201" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25"/>
+                <Label x:Name="Adress_Lbl" Content="Schoren 11, Huissen [Netherlands]" HorizontalAlignment="Left" Margin="0,148,0,0" VerticalAlignment="Top" Width="201" Background="Transparent" Foreground="#FFF7F1F1" FontSize="9" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25"/>
+            </Grid>
+
+            <!--Settings Setup-->
+            <Button x:Name="Settings_btn" Content="Settings" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Click="Settings_btn_Click"/>
+
+            <!--MyData Setup-->
+            <Button x:Name="MyData_Btn" Content="MyData" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Click="MyData_Btn_Click"/>
+            <StackPanel x:Name="MyDataContent" Width="200" Orientation="Vertical" VerticalAlignment="Top" Background="#FF202020">
+                <Button x:Name="Files_btn" Content="Files" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF202020" OpacityMask="Black" BorderThickness="1,0,1,0.5" Click="Files_btn_Click"/>
+                <Button x:Name="Database_btn" Content="Database" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF202020" OpacityMask="Black" BorderThickness="1,0,1,0.5" Click="Database_btn_Click"/>
+            </StackPanel>
+
+            <!--Project Setup-->
+            <Button x:Name="Projects_btn" Content="Projects" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Click="Projects_btn_Click" BorderThickness="1,1,1,0"/>
+            <StackPanel x:Name="ProjectsContent" Width="200" Orientation="Vertical" VerticalAlignment="Top" Background="#FF202020">
+                <Button x:Name="NewProject_btn" Content="New" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF202020" OpacityMask="Black" BorderThickness="1,0,1,0.5" HorizontalContentAlignment="Center"/>
+                <Button x:Name="OverviewProjects_btn" Content="Overview" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF202020" OpacityMask="Black" BorderThickness="1,0,1,0.5" Click="OverviewProjects_btn_Click"/>
+            </StackPanel>
+
+            <!--MyCodesnipped Setup-->
+            <Button x:Name="MySnippeds_btn" Content="MySnippeds" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Click="MySnippeds_btn_Click" BorderThickness="1,2,1,1" />
+            <StackPanel x:Name="MySnippedsContent" Width="200" Orientation="Vertical" VerticalAlignment="Top" Background="#FF202020">
+                <Button x:Name="NewMySnippeds_btn" Content="New" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF202020" OpacityMask="Black" BorderThickness="1,0,1,0.5"/>
+                <Button x:Name="OverviewMySnippeds_btn" Content="Overview" Width="200" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF202020" OpacityMask="Black" BorderThickness="1,0,1,0.5" Click="OverviewMySnippeds_btn_Click"/>
+            </StackPanel>
+        </WrapPanel>
+
+        <ContentControl Name="Content">
+        <!--Menu Tabs-->
+            <TabControl x:Name="MainMenuTabControl" VerticalAlignment="Top" Background="{x:Null}" Margin="205,0,0,0" Padding="0">
+
+            <!--Edit Profile-->
+            <TabItem Header="EditProfile">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Edit Profile" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="115" Background="Transparent" Foreground="#FFF7F1F1" FontSize="20"/>
+                </Grid>
+            </TabItem>
+
+            <!--Settings-->
+            <TabItem Header="Settings">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Settings" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="115" Background="Transparent" Foreground="#FFF7F1F1" FontSize="20"/>
+                </Grid>
+            </TabItem>
+
+            <!--MyData-->
+            <TabItem Header="MyData">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="MyData" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="115" Background="Transparent" Foreground="#FFF7F1F1" FontSize="20"/>
+                </Grid>
+            </TabItem>a
+
+            <!--Project Overview-->
+            <TabItem Header="ProjectsOverview">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="ProjectsOverview" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="204" Background="Transparent" Foreground="#FFF7F1F1" FontSize="20" Grid.ColumnSpan="2"/>
+
+                    <Grid Name="ProjectOverviewGrid" Height="auto" Grid.ColumnSpan="2" Margin="70,0.2,70,70">
+                        <!--Overview-->
+                        <Canvas Name="ProjectOverview" Height="300" Background="#FF323232" Margin="0,101,0.4,101.6">
+                            <Label Content="Database1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68"/>
+                            <Image VerticalAlignment="Stretch" Source="pack://siteoforigin:,,,/Resources/General/Images/Icons/ExplanatioMark_Colered.png" Height="30" Canvas.Right="152" Width="36" Canvas.Left="162"/>
+                            <Label Content="State" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Canvas.Left="118"/>
+                        </Canvas>
+                        <!--All projects-->
+                        <StackPanel Name="myProjects_container" Background="LightGray" Margin="0,460,10.2,0.6">
+                            <DockPanel Height="40" Background="#FF323232" Margin="1">
+                                <Label Content="ProjectName: " HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" Foreground="#FFF7F1F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" FontWeight="Bold" FontStyle="Italic" FontSize="14"/>
+                                <Label Content="Dorp_logistics" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" Foreground="#FFF7F1F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Canvas.Left="118" FontSize="14"/>
+
+                                <Button Content="Open" Background="#FF222121" HorizontalAlignment="Right" Width="130" Height="auto" FontSize="15" Foreground="#FFF7F1F1" BorderBrush="#FF707070" OpacityMask="Black" DockPanel.Dock="Right"/>
+                                <Button Content="Delete" Background="#FF222121" HorizontalAlignment="Right" Width="130" Height="auto" FontSize="15" Foreground="#FFF7F1F1" BorderBrush="#FF707070" OpacityMask="Black" DockPanel.Dock="Right"/>
+                                
+                                <Label Content="Created:" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" Foreground="#FFF7F1F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Margin="0,4.5" FontWeight="Bold" FontStyle="Italic" FontSize="14"/>
+                                <Label Content="17-10-1999" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" Foreground="#FFF7F1F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Margin="0,4.5" FontSize="14"/>
+                                <Label Content="LastEdit:" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" Foreground="#FFF7F1F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Margin="0,4.5" FontWeight="Bold" FontStyle="Italic" FontSize="14"/>
+                                <Label Content="17-10-1999" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" Foreground="#FFF7F1F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Margin="0,4.5" FontSize="14"/>
+                            </DockPanel>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </TabItem>
+
+            <!--MySnipped Overview-->
+            <TabItem Header="MySnippeds Overview">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!--MenuBar-->
+                    <Border CornerRadius="0" BorderBrush="Gray" Background="LightGray" BorderThickness="2" DockPanel.Dock="Top" Height="30" Margin="0,20,1.2,0" VerticalAlignment="Top" Grid.Column="1">
+                        <WrapPanel x:Name="MySnippedMenuBar" Height="30" Width="1705" Grid.ColumnSpan="2" Margin="0" Background="#FF343232">
+                            <Button x:Name="NewSnipped_Menubar_btn" Content="+ New Snipped" Width="154" Height="30" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" OpacityMask="Black" Background="{x:Null}"/>
+                            <TextBox Name="SearchBox_Mysnipped_txb" VerticalContentAlignment="Center" Height="30" TextWrapping="NoWrap" Width="203" FontSize="14" TextAlignment="Center" BorderThickness="0"/>
+                            <ComboBox Name="MySnipped_Languages_Cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="120" Height="30" Background="#FF323232" />
+                            <ComboBox Name="MySnipped_Date_Cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="120" Height="30" Background="#FF323232" />
+                            <TextBox x:Name="TagFilter_txt" VerticalContentAlignment="Center" Height="30" TextWrapping="NoWrap" Width="203" FontSize="14" TextAlignment="Center" KeyUp="TagFilter_txt_KeyUp"/>
+                        </WrapPanel>
+                    </Border>
+
+                    <!--Label-->
+                    <Label Content="MySnipped Overview" HorizontalAlignment="Left" Margin="0,58,0,0" VerticalAlignment="Top" Width="257" Background="Transparent" Foreground="#FFF7F1F1" FontSize="20" Grid.ColumnSpan="2" Height="37"/>
+
+                    <!--Snippeds-->
+                    <StackPanel Name="SP_container" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="33" Background="LightGray" Margin="1,200,0,0" Grid.Column="1">
+                        <Canvas Height="31" Background="#FF323232" Margin="1">
+                            <Label Content="Database1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68"/>
+                            <Image VerticalAlignment="Stretch" Source="pack://siteoforigin:,,,/Resources/General/Images/Icons/ExplanatioMark_Colered.png" Height="30" Canvas.Right="152" Width="36" Canvas.Left="162"/>
+                            <Label Content="State" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Canvas.Left="118"/>
+                        </Canvas>
+                    </StackPanel>
+
+
+                    <!--Code-->
+                    <Border  Grid.Column="1" CornerRadius="0" BorderBrush="LightGray" Background="Gray" BorderThickness="2" Margin="0,217,0.2,278.6" HorizontalAlignment="Right" Width="300">
+                        <StackPanel>
+                            <RichTextBox Background="{x:Null}" Margin="10,10,9.6,3" BorderThickness="0" Height="455" IsReadOnly="True">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run Text="Here will all the code be!" Foreground="#FFF9F9F9"/>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                        </StackPanel>
+                    </Border>
+                    <!--UsageContainer-->
+                    <Border  Grid.Column="1" CornerRadius="0" BorderBrush="LightGray" Background="Gray" BorderThickness="2" Margin="0,698,0.2,150.6" HorizontalAlignment="Right" Width="300">
+                        <StackPanel>
+                            <RichTextBox  Background="{x:Null}" Margin="10,10,82.6,20.4" BorderThickness="0" Height="42" IsReadOnly="True">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run Text="Here will the code Usage be!" Foreground="#FFF9F9F9"/>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                        </StackPanel>
+                    </Border>
+                    <!--DescriptionContainer-->
+                    <Border  Grid.Column="1" CornerRadius="0" BorderBrush="LightGray" Background="Gray" BorderThickness="2" Margin="0,826,0.2,95.6" HorizontalAlignment="Right" Width="300">
+                        <StackPanel Margin="0.4,-1.6,-0.4,-0.2">
+                            <RichTextBox  Background="{x:Null}" Margin="10,10,9.6,20" BorderThickness="0" IsReadOnly="True">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Run Text="Here will the code Desiption be!" Foreground="#FFF9F9F9"/>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                        </StackPanel>
+                    </Border>
+
+
+
+                    <!--TagContainer-->
+                    <WrapPanel x:Name="TagContainer" Height="34" Background="Gray" Margin="460,50,701.2,0" Grid.Column="1" VerticalAlignment="Top">
+                        <Canvas Height="31" Width="100" Background="#FF323232" Margin="1">
+                            <Label x:Name="FullName_Lbl_Copy" Content="#TagExample" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68"/>
+                            <Button x:Name="AddTagExample" Content="+" Width="19" Height="31" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="{x:Null}" OpacityMask="Black" Canvas.Left="81" BorderThickness="0"/>
+                        </Canvas>
+                    </WrapPanel>
+                </Grid>
+            </TabItem>
+
+            <!--Files-->
+            <TabItem Header="Files">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Files" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="auto" Background="Transparent" Foreground="#FFF7F1F1" FontSize="20"/>
+                </Grid>
+            </TabItem>
+
+            <!--Database-->
+            <TabItem Header="Database">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--MenuBar-->
+                    <Border CornerRadius="0" BorderBrush="Gray" Background="LightGray" BorderThickness="2" DockPanel.Dock="Top" Grid.ColumnSpan="2" Margin="0,20,-0.2,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="34" Width="auto">
+                        <WrapPanel Height="30" Grid.ColumnSpan="3" Margin="0" Background="#FF343232">
+                            <Button Name="refresh_btn" Content="Refresh" Width="66" Height="30" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" OpacityMask="Black" Background="{x:Null}" Click="refresh_btn_Click"/>
+                            <Button Content="+ Database" Width="154" Height="30" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" OpacityMask="Black" Background="{x:Null}" Click="Button_Click"/>
+                            <TextBox VerticalContentAlignment="Center" Height="30" TextWrapping="NoWrap" Width="203" FontSize="14" TextAlignment="Center" BorderThickness="0"/>
+                            <ComboBox Name="DB_Databases_Filter_cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="120" Height="30" Background="#FF323232" SelectionChanged="DB_Databases_Filter_cmb_SelectionChanged" />
+                            <ComboBox Name="DB_filterType_cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="120" Height="30" Background="#FF323232" SelectionChanged="DB_filterType_cmb_SelectionChanged" />
+
+                            <ComboBox Name="DB_TableFilter_cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="120" Height="30" Background="#FF323232" />
+                        </WrapPanel>
+                    </Border>
+                    <Label Content="Database" HorizontalAlignment="Left" Margin="0,-12,0,0" VerticalAlignment="Top" Width="115" Background="Transparent" Foreground="#FFF7F1F1" FontSize="20" RenderTransformOrigin="0.501,0.21" Height="32" Grid.ColumnSpan="2"/>
+
+                    <!--Databases Status-->
+                    <StackPanel Name="Db_status_container" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="auto" Background="LightGray" Margin="0,91,-0.2,0" Grid.Column="1">
+                        <Canvas Height="31" Background="#FF323232" Margin="1">
+                            <Label Content="Database1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68"/>
+                            <Image VerticalAlignment="Stretch" Source="pack://siteoforigin:,,,/Resources/General/Images/Icons/ExplanatioMark_Colered.png" Height="30" Canvas.Right="152" Width="36" Canvas.Left="162"/>
+                            <Label Content="State" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Canvas.Left="118"/>
+                        </Canvas>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        </ContentControl>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+name: myCodesnippets
+
+mysnippets wil be a application where you can manage your projects en push them to git in one click
+be able to see what has not been pushed yet and what is already pushed.
+
+quick shortcut to the github site where the selected project is.
+be able to have multiple projects open and switch between them using tabs.
+have multple functionalities open in one window tab. 
+drag and drop functionalities to another screen and autocreate a new window.
+
+create your own code snippet database and push it to a git project. so it's save and you can use it by using any device.
+
+be able to get quick acces the snippet by exporting it as a new script in the apropiated language to a assigned project.
+or direct copy it to your clipboard.
+
+be able to create a setup for example you need visual studio with your project and you need google chrome.
+this will open that setup for you!
+
+go from where you left.
+opens all programs that where open when you stopped
+
+Leave a left note.
+this will popup when one of the documents with a left note is opend by using the code snipped program
+
+
+
+

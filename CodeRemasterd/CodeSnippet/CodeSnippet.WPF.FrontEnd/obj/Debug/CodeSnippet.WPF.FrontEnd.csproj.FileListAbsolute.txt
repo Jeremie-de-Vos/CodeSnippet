@@ -1,0 +1,7 @@
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Login.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\MainView.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Register.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\App.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\CodeSnippet.WPF.FrontEnd_MarkupCompile.cache
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\CodeSnippet.WPF.FrontEnd_MarkupCompile.lref
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\CodeSnippet.WPF.FrontEnd.csprojResolveAssemblyReference.cache

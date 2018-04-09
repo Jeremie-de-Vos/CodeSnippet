@@ -1,0 +1,15 @@
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.exe.config
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.exe
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\bin\Debug\MyCodeSnipped.pdb
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csprojResolveAssemblyReference.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MainWindow.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\App.g.cs
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped_MarkupCompile.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped_MarkupCompile.lref
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MainWindow.baml
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.g.resources
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.Properties.Resources.resources
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csproj.GenerateResource.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.csproj.CoreCompileInputs.cache
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.exe
+C:\Users\Jeremie\Desktop\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\MyCodeSnipped.pdb

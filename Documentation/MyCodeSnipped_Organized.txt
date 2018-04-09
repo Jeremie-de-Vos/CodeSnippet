@@ -1,0 +1,134 @@
+
+
+-<myCodeSnippet>-
+
+Login
+- Login with a local login or user based
+- be able to use a pin or password
+
+Tag-Filter:
+- Filter, set different programming language for filtering and searching code snippets.
+- Filter, using tags with sugestions by a local database that reminds older used tags.   
+- Filter, 
+- Tags,   These tags can also be removed if it was weird one by right clicking and click remove from history.
+
+Snipped System:
+- Add code snipped by asking for the code and a usage example. Also add tags that are related to the code.
+- Create new collection of code in one class
+- Create new collection (api) to import to project
+- Have options to save/Export it as an function, class or one-lined code-snipped.
+
+Buildin-Editors:
+- build in text editor for word documents to make quick changes.
+- Build in to-do system. Organised in The MoSCoW methode.
+- Build in Known bugs System. So you don't forget about them.
+- Manage the files and be able to color code them for easy usages.
+
+Project_Management:
+- build in project tracker. with a timeline where you can see what you have done that day by checking if there where bugs/todo finished that day.
+- build in reminder system. set reminders when opening a specific document so it can let you know where you left and what you where doing.
+- build in planning system. this planning system will track your progress.
+- be able to plan your project into different states (Documentation, Programming, Deliver-Product and maybe more).
+- Leave a left note. This will popup when one of the documents with a left note is opend by using the code snipped program.
+
+Planning System:
+- Leave note what you have done in the worked time in the planner.
+- Plan in what kind of state you want to be in at that time of the project (Documentation, Programming, Deliver-Product)
+- Import school schedule/work time (end/start time)
+- Export to exel document
+- Change filter to: (Planned, State, Finished)
+  Finished = Bugs,Todo items that has been finished that day showed with time
+  Planned = Your planned items
+  State = what state your currently at (Documentation, Programming, Deliver-Product)
+
+Project-Startup:
+- build in template system. creating a new project and make use of a template so it wil make/setup a easy start up.
+  this is really helpfull for when you have to do documentations or need files in a spesific order.
+- when creating a new project give it some code snippets to start fast.
+  this can come in handy when you need a login and you have already made one before. 
+
+Sub buttons: DataManagement->Files | Database
+MyData-Management:
+- DB, See all data to CRUD (all Tables).
+- Files, See all files in project and how much space they use.
+
+Database:
+- FilterSystem based on: Databases | Tables | Field Names | Records | 
+- Add local or server database
+- Load all tables and filter them by using a combobox
+- Export a CRUD Function for a table that creates a class from all the fields in the table and return it by aking.
+  This can be called by | internal "Autocrceated class name from this table"(int id, CRUD.delete)  
+- Be able to check connectifetie to the database
+- Be able to CRUD the tables.
+- Be able to add multiple Databases
+
+Searchbar:
+- Search for a spesific window to open for example Todo | Codesnippets | Bugs | Settings | Projects | Dashboard | and so on!!!
+- Filter (Windows | Snippets | Todo | Bugs | Projects | Files | and so on!!!)
+
+Quick acces:
+- Be able with a keyCombination to quickly add a new(bug or to-do item)
+- Be able with a keyCombination to quickly Search a code snipped and copy them to clipboar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Database-Structure:
+- Users			[ID, Firstname, Middlename, Lastname, Email, Password, Pin]	
+- Code snippets		[ID, UserID, Name, Code, CodeEditDate, Usage, UsageEditDate, Description, DescriptioneditDate CodeSnippedID, Type]		Single-lined, Class, Function
+- Project		[ID, UserID, Name]
+
+- CodeSnippetTags	[ID, CodeSnippedID]
+- Tags			[ID, CodeSnippedTagsID, Tagname]
+
+- Collections		[ID, ProjectID, Name]
+- CollSnippets		[ID, CollectionID, CodeSnippetID]
+
+- Templates		[ID, ProjectID, Name]
+- TempFiles		[ID, fileName, parentID, TemplateID]					parentId = the file it blongs in (TempfilesID)
+
+- TodoSubject		[ID, ProjectID, Name]
+- TodoItem		[ID, TodoSubjectID, Description, Priority, Status, CreateDate, FinishedDate]
+
+- BugItem		[ID, ProjectId, Description, Priority, Status, CreateDate, FinishedDate]
+
+- LeftNote		[ID, ProjectId, TempFileID, Note]
+
+
+- Planner		[ID, ProjectID, DateTimeBegining, DateTimeEnding, Name, Description, Color]
+- PlanState		[ID, ProjectID, DateTimeBegining, DateTimeEnding, StateName, Color]
+
+
+
+
+
+
+
+
+
+
+
+
+
+

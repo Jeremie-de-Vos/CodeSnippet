@@ -1,0 +1,35 @@
+﻿<Page x:Class="MyCodeSnipped.Resources.Pages.Database"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyCodeSnipped.Resources.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="920" d:DesignWidth="1240.8"
+      Title="Database">
+
+    <Grid Background="#FF252323">
+        <!--Header-->
+        <Label Content="Database" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Foreground="#FFF7F1F1" FontSize="20" RenderTransformOrigin="0.501,0.21"/>
+        <!--MenuBar-->
+        <Border CornerRadius="0" BorderBrush="Gray" Background="LightGray" BorderThickness="2" DockPanel.Dock="Top" Margin="0,42,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="34" Width="auto">
+            <WrapPanel Height="30" Grid.ColumnSpan="3" Margin="0" Background="#FF343232">
+                <Button Name="refresh_btn" Content="Refresh" Width="66" Height="30" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" OpacityMask="Black" Background="{x:Null}" Click="refresh_btn_Click"/>
+                <Button Content="+ Database" Width="154" Height="30" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" OpacityMask="Black" Background="{x:Null}" Click="Button_Click"/>
+                <TextBox VerticalContentAlignment="Center" Height="30" TextWrapping="NoWrap" Width="203" FontSize="14" TextAlignment="Center" BorderThickness="0"/>
+                <ComboBox Name="DB_Databases_Filter_cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="120" Height="30" Background="#FF323232" SelectionChanged="DB_Databases_Filter_cmb_SelectionChanged" />
+                <ComboBox Name="DB_filterType_cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="120" Height="30" Background="#FF323232" SelectionChanged="DB_filterType_cmb_SelectionChanged" />
+
+                <ComboBox Name="DB_TableFilter_cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="120" Height="30" Background="#FF323232" />
+            </WrapPanel>
+        </Border>
+        <!--Databases Status-->
+        <StackPanel Name="Db_status_container" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="auto" Background="LightGray" Margin="0,91,-0.2,0" Grid.Column="1">
+            <Canvas Height="31" Background="#FF323232" Margin="1">
+                <Label Content="Database1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68"/>
+                <Image VerticalAlignment="Stretch" Source="pack://siteoforigin:,,,/Resources/General/Images/Icons/ExplanatioMark_Colered.png" Height="30" Canvas.Right="152" Width="36" Canvas.Left="162"/>
+                <Label Content="State" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Background="Transparent" Foreground="#FFF7F1F1" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" RenderTransformOrigin="1.531,0.68" Canvas.Left="118"/>
+            </Canvas>
+        </StackPanel>
+    </Grid>
+</Page>

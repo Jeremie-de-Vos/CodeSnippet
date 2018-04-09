@@ -1,0 +1,9 @@
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\bin\Debug\CodeSnippet.Data.dll.config
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\bin\Debug\CodeSnippet.Data.dll
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\bin\Debug\CodeSnippet.Data.pdb
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\bin\Debug\MySql.Data.dll
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\bin\Debug\MySql.Data.xml
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\obj\Debug\CodeSnippet.Data.csproj.CoreCompileInputs.cache
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\obj\Debug\CodeSnippet.Data.csproj.CopyComplete
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\obj\Debug\CodeSnippet.Data.dll
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\obj\Debug\CodeSnippet.Data.pdb
