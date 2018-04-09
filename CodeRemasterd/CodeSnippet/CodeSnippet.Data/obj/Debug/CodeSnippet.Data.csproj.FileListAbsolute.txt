@@ -7,3 +7,4 @@ D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\
 D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\obj\Debug\CodeSnippet.Data.csproj.CopyComplete
 D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\obj\Debug\CodeSnippet.Data.dll
 D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\obj\Debug\CodeSnippet.Data.pdb
+D:\Visual-Studio Projects\Mysnippets\CodeRemasterd\CodeSnippet\CodeSnippet.Data\obj\Debug\CodeSnippet.Data.csprojResolveAssemblyReference.cache

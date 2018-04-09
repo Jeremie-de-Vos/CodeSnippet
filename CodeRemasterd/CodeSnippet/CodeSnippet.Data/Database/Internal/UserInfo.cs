@@ -36,6 +36,7 @@ namespace CodeSnippet.Data.Database.Internal
             //finally
             finally
             {
+                connection.Close();
             }
         }
     }
