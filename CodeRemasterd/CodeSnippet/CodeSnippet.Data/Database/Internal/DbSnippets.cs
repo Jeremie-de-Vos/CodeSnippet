@@ -23,11 +23,15 @@ namespace CodeSnippet.Data.Database.Internal
             //Build Mysql command
             MySqlCommand cmd = connection.CreateCommand();
 
+            //The Default cmd String
+            string cmdString = "SELECT `ID`, `UserID`, `TagCollectionID`, `Name`, `Code`, `CodeEditDate`, `UsageExample`, `UsageEditDate`, `Description`, `DescriptionEditDate`, `LanguageID`, `CreateDate` FROM `codesnippets` ";
+
+            //If filter not is all add where string
             if (CodeLanguage != "All")
-                cmd.CommandText = "SELECT `ID`, `UserID`, `TagCollectionID`, `Name`, `Code`, `CodeEditDate`, `UsageExample`, `UsageEditDate`, `Description`, `DescriptionEditDate`, `LanguageID`, `CreateDate` FROM `codesnippets` " +
-                "WHERE `LanguageID` = @LanguageID";
-            else
-                cmd.CommandText = "SELECT `ID`, `UserID`, `TagCollectionID`, `Name`, `Code`, `CodeEditDate`, `UsageExample`, `UsageEditDate`, `Description`, `DescriptionEditDate`, `LanguageID`, `CreateDate` FROM `codesnippets` ";
+                cmdString += "WHERE `LanguageID` = @LanguageID";
+
+            //Add the CommandText
+            cmd.CommandText = cmdString;
 
             //Add Parameter
             cmd.Parameters.AddWithValue("@LanguageID", DbCodeLanguage.ToID(CodeLanguage));
@@ -92,15 +96,31 @@ namespace CodeSnippet.Data.Database.Internal
                 //Tag filter
             }
 
+            //Close Connection
+            connection.Close();
+
             //Return Temp List
             return Temp;
-
-            //Before adding the item to the temp list filter it on date
-            //By setting up a local variable
-           // DateTime.Parse(_CreateDate)
         }
+
+        //Sort Temp list on date
+        private static List<SnippetInfo> SortAscending(List<SnippetInfo> list)
+        {
+            list.Sort((a, b) => a._CreateDate.CompareTo(b._CreateDate));
+            return list;
+        }
+        //Sort Temp list on date
+        private static List<SnippetInfo> SortDescending(List<SnippetInfo> list)
+        {
+            list.Sort((a, b) => b._CreateDate.CompareTo(a._CreateDate));
+            return list;
+        }
+
+
+
+        //-------------------------CRUD------------------------------
         //Add new Snippet
-        public static bool AddNewSnippet(SnippetInfo snippetInfo)
+        public static void AddNewSnippet(SnippetInfo snippetInfo)
         {
             using (MySqlConnection connection = DbInfo.Connection())
             {
@@ -128,7 +148,6 @@ namespace CodeSnippet.Data.Database.Internal
                     try
                     {
                         int recordsAffected = cmd.ExecuteNonQuery();
-                        return true;
                     }
                     finally
                     {
@@ -137,18 +156,77 @@ namespace CodeSnippet.Data.Database.Internal
                 }
             }
         }
+        //Update new Snippet
+        public static void UpdateSnippet(SnippetInfo snippetInfo)
+        {
+            using (MySqlConnection connection = DbInfo.Connection())
+            {
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText =
+                        "UPDATE `codesnippets` SET " +
+                        "`TagCollectionID`=@TagCollectionID," +
+                        "`Name`=@Name," +
+                        "`Code`=@Code," +
+                        "`CodeEditDate`=@CodeEditDate," +
+                        "`UsageExample`=@UsageExample," +
+                        "`UsageEditDate`=@UsageEditDate," +
+                        "`Description`=@Description," +
+                        "`DescriptionEditDate`=@DescriptionEditDate," +
+                        "`LanguageID`=@LanguageID," +
+                        "WHERE `ID`= @ID";
 
-        //Sort Temp list on date
-        private static List<SnippetInfo> SortAscending(List<SnippetInfo> list)
-        {
-            list.Sort((a, b) => a._CreateDate.CompareTo(b._CreateDate));
-            return list;
+                    cmd.Parameters.AddWithValue("@TagCollectionID", snippetInfo._TagCollectionID);
+                    cmd.Parameters.AddWithValue("@Name", snippetInfo._Name);
+                    cmd.Parameters.AddWithValue("@Code", snippetInfo._Code);
+                    cmd.Parameters.AddWithValue("@CodeEditDate", snippetInfo._CodeEditDate.ToString());
+                    cmd.Parameters.AddWithValue("@UsageExample", snippetInfo._UsageExample);
+                    cmd.Parameters.AddWithValue("@UsageEditDate", snippetInfo._UsageEditDate.ToString());
+                    cmd.Parameters.AddWithValue("@Description", snippetInfo._Description);
+                    cmd.Parameters.AddWithValue("@DescriptionEditDate", snippetInfo._DescriptionEditDate.ToString());
+                    cmd.Parameters.AddWithValue("@LanguageID", snippetInfo._LanguageID);
+
+                    try
+                    {
+                        int recordsAffected = cmd.ExecuteNonQuery();
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
         }
-        //Sort Temp list on date
-        private static List<SnippetInfo> SortDescending(List<SnippetInfo> list)
+        //Delete new Snippet
+        public static void DeleteSnippet(int ID)
         {
-            list.Sort((a, b) => b._CreateDate.CompareTo(a._CreateDate));
-            return list;
+            //Create Connection
+            using (MySqlConnection connection = DbInfo.Connection())
+            {
+                //Create Cmd
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandType = CommandType.Text;
+
+                    //Set CommandText
+                    cmd.CommandText = "DELETE FROM `codesnippets` WHERE `ID` = @ID";
+
+                    //Add Parameters
+                    cmd.Parameters.AddWithValue("@ID", ID);
+
+                    try
+                    {
+                        int recordsAffected = cmd.ExecuteNonQuery();
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
         }
     }
 }

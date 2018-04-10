@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CodeSnippet.Data.Database.Internal
 {
-    public class NewDbInfo
+    public class DbExamples
     {
+        //Create 2 examples foreach CodeLanguage from Database
         public static void CodeSnippedExampleForeachCodeLanguageInDatabase()
         {
             int ExamplePerLanguage = 2;

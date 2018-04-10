@@ -9,7 +9,10 @@ namespace CodeSnippet.Data.Database.Internal
 {
     public class UserInfo
     {
+        //UserInformation that can be used for getting data
         public static UserInfoClass Userinformation;
+
+        //Set all Userinformation with Id that is given by the LoginHandler Script
         public static void SetUserInfo(int ID)
         {
             //create connection and open it

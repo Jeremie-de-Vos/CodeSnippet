@@ -85,6 +85,8 @@ namespace CodeSnippet.Data.Database.External
                 return nl;
             }
         }
+
+        //Crud
     }
     public enum DBStatus
     {

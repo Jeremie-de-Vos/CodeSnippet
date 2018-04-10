@@ -22,6 +22,10 @@ namespace CodeSnippet.WPF.FrontEnd
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Prefending startup errors
+        bool startup = false;
+
+        //Main
         public MainWindow()
         {
             InitializeComponent();
@@ -40,31 +44,57 @@ namespace CodeSnippet.WPF.FrontEnd
             MySnipped_Date_Cmb.SelectedIndex = 0;
             MySnipped_Type_Cmb.SelectedIndex = 0;
             MySnipped_Languages_Cmb.SelectedIndex = 0;
+
+            startup = true;
         }
 
+        //TestButton Clicked
         private void Test_btn_Click(object sender, RoutedEventArgs e)
         {
             Field.Document.Blocks.Clear();
             //foreach (string i in Converter.GetAllDateFilterToStringArray())
             //Field.AppendText(Environment.NewLine+"- " + System.DateTime.Now.ToString());
         }
-
+        //SearchBox if Enter is pressed
         private void SearchBox_Mysnipped_txb_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
-            {
-                MessageBox.Show(Converter.StringToDateFilter(MySnipped_Date_Cmb.SelectedItem.ToString()).ToString());
-                List<SnippetInfo> snippets = DbSnippets.GetFilteredSnippeds(
-                    SearchBox_Mysnipped_txb.Text,
-                    MySnipped_Languages_Cmb.SelectedItem.ToString(),
-                    Converter.StringToDateFilter(MySnipped_Date_Cmb.SelectedItem.ToString()),
-                    Converter.StringToTypefilter(MySnipped_Type_Cmb.SelectedItem.ToString())
-                    );
+                FilterCodeSnippeds();
+        }
 
-                Results.Document.Blocks.Clear();
-                for (int i = 0; i < snippets.Count; i++)
-                    Results.AppendText(Environment.NewLine + "- " + snippets[i]._Name + " "+DbCodeLanguage.ToString(snippets[i]._LanguageID)+" " + snippets[i]._CreateDate);
-            }
+        //Cmb Selection changed
+        private void MySnipped_Date_Cmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(startup)
+                FilterCodeSnippeds();
+        }
+        private void MySnipped_Languages_Cmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (startup)
+                FilterCodeSnippeds();
+        }
+        private void MySnipped_Type_Cmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (startup)
+                FilterCodeSnippeds();
+        }
+
+        //Filter all the CodeSnippeds by the asigned Values
+        private void FilterCodeSnippeds()
+        {
+            //Give all filter values
+            List<SnippetInfo> snippets = DbSnippets.GetFilteredSnippeds(
+            SearchBox_Mysnipped_txb.Text,
+            MySnipped_Languages_Cmb.SelectedItem.ToString(),
+            Converter.StringToDateFilter(MySnipped_Date_Cmb.SelectedItem.ToString()),
+            Converter.StringToTypefilter(MySnipped_Type_Cmb.SelectedItem.ToString())
+            );
+            //Clear RichTextBox
+            Results.Document.Blocks.Clear();
+            //Forieach item show it in RichTextBox
+            for (int i = 0; i < snippets.Count; i++)
+                Results.AppendText(Environment.NewLine + "- " + snippets[i]._Name + " " + DbCodeLanguage.ToString(snippets[i]._LanguageID) + " " + snippets[i]._CreateDate);
+
         }
     }
 }

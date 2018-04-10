@@ -59,7 +59,7 @@
     <Compile Include="Database\Internal\DbCodeLanguage.cs" />
     <Compile Include="Database\Internal\DbSnippets.cs" />
     <Compile Include="Database\Internal\DbTags.cs" />
-    <Compile Include="Database\Internal\NewDbInfo.cs" />
+    <Compile Include="Database\Internal\DbExamples.cs" />
     <Compile Include="LoginRegister\Register.cs" />
     <Compile Include="SetUI.cs" />
     <Compile Include="Database\External\GetDbInfo.cs" />
