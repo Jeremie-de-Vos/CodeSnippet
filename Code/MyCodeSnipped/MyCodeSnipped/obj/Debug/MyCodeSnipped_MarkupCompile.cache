@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\Code\MyCodeSnipped\MyCodeSnipped\obj\Debug\
 MyCodeSnipped
 none
 false
 DEBUG;TRACE
-D:\Visual-Studio Projects\Mysnippets\Code\MyCodeSnipped\MyCodeSnipped\App.xaml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\Code\MyCodeSnipped\MyCodeSnipped\App.xaml
 5-1961015602
 
-151880073097
-74-707436095
+19-194461259
+74434272176
 MainWindow.xaml;Resources\General\AddDatabase.xaml;Resources\General\LoginRegister\Windows\LoginWindow.xaml;Resources\General\LoginRegister\Windows\RegisterWindow.xaml;Resources\Pages\Database.xaml;
 
-False
+True
 

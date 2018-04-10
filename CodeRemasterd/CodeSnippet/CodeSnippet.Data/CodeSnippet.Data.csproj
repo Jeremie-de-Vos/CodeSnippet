@@ -55,9 +55,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converter\Converter.cs" />
     <Compile Include="Database\Internal\DbCodeLanguage.cs" />
     <Compile Include="Database\Internal\DbSnippets.cs" />
     <Compile Include="Database\Internal\DbTags.cs" />
+    <Compile Include="LoginRegister\Register.cs" />
     <Compile Include="SetUI.cs" />
     <Compile Include="Database\External\GetDbInfo.cs" />
     <Compile Include="Database\Internal\DbInfo.cs" />
@@ -82,9 +84,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converter\" />
-    <Folder Include="LoginRegister\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,10 +10,10 @@ namespace CodeSnippet.Data.Database.Internal
     public class DbTags
     {
         //Returns a list with all Tags in Database
-        public List<string> GetAllTags()
+        public static List<TagInfo> GetAllTags()
         {
             //Create temp List
-            List<string> Temp = new List<string>();
+            List<TagInfo> Temp = new List<TagInfo>();
 
             //create connection and open it
             MySqlConnection connection = DbInfo.Connection();
@@ -22,18 +22,28 @@ namespace CodeSnippet.Data.Database.Internal
             MySqlCommand cmd = connection.CreateCommand();
 
             //Create and add Commandtext
-            cmd.CommandText = "SELECT `TagName` FROM `tags`";
+            cmd.CommandText = "SELECT `ID`, `TagName` FROM `tags`";
 
             //Create reader
             MySqlDataReader reader = cmd.ExecuteReader();
 
             //While reading
             while (reader.Read())
-                Temp.Add(reader["TagName"].ToString());
+                Temp.Add(new TagInfo(int.Parse(reader["ID"].ToString()), reader["TagName"].ToString()));
 
             return Temp;
         }
 
         //Get all tags related to snipped ID
+    }
+}
+public class TagInfo
+{
+    public int ID;
+    public string Name;
+    public TagInfo(int _ID, string _Name)
+    {
+        ID = _ID;
+        Name = _Name;
     }
 }

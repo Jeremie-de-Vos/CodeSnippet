@@ -1,0 +1,19 @@
+﻿<Window x:Class="CodeSnippet.WPF.FrontEnd.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720.42" Width="444.8">
+    <Grid  Background="#FF252323">
+        <Button x:Name="Test_btn" Content="Test" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Margin="34,594,38.4,46.2" Click="Test_btn_Click" />
+        <RichTextBox Name="Field" Background="{x:Null}" Foreground="LightGreen" HorizontalAlignment="Left" Height="565" Margin="34,10,0,0" VerticalAlignment="Top" Width="366" RenderTransformOrigin="0.206,-1.098">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>
