@@ -34,6 +34,7 @@ namespace CodeSnippet.Data.Database.Internal
             //Return The temp list
             return Temp;
         }
+
         //Convert a Language Name To a ID from Database
         public static int ToID(string LanguageName)
         {
@@ -53,7 +54,7 @@ namespace CodeSnippet.Data.Database.Internal
 
             //if match is found
             if (reader.Read())
-                return int.Parse(reader["TagName"].ToString());
+                return int.Parse(reader["ID"].ToString());
             else
                 return 0;
         }
@@ -76,7 +77,7 @@ namespace CodeSnippet.Data.Database.Internal
 
             //if match is found
             if (reader.Read())
-                return reader["TagName"].ToString();
+                return reader["Name"].ToString();
             else
                 return "";
         }

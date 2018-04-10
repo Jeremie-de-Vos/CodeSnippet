@@ -11,6 +11,7 @@ namespace CodeSnippet.Data.Database.Internal
 {
     public class DbSnippets
     {
+        //Filter out all codesnippets
         public static List<SnippetInfo> GetFilteredSnippeds(string name, string CodeLanguage, DateFilter dateFilter, TypeFilter typeFilter)
         {
             //Create Temp List
@@ -22,11 +23,13 @@ namespace CodeSnippet.Data.Database.Internal
             //Build Mysql command
             MySqlCommand cmd = connection.CreateCommand();
 
-            //Create and add Commandtext
-            cmd.CommandText = "SELECT `ID`, `UserID`, `TagCollectionID`, `Name`, `Code`, `CodeEditDate`, `UsageExample`, `UsageEditDate`, `Description`, `DescriptionEditDate`, `LanguageID`, `CreateDate` FROM `codesnippets` " +
+            if (CodeLanguage != "All")
+                cmd.CommandText = "SELECT `ID`, `UserID`, `TagCollectionID`, `Name`, `Code`, `CodeEditDate`, `UsageExample`, `UsageEditDate`, `Description`, `DescriptionEditDate`, `LanguageID`, `CreateDate` FROM `codesnippets` " +
                 "WHERE `LanguageID` = @LanguageID";
+            else
+                cmd.CommandText = "SELECT `ID`, `UserID`, `TagCollectionID`, `Name`, `Code`, `CodeEditDate`, `UsageExample`, `UsageEditDate`, `Description`, `DescriptionEditDate`, `LanguageID`, `CreateDate` FROM `codesnippets` ";
 
-            //Add parameters
+            //Add Parameter
             cmd.Parameters.AddWithValue("@LanguageID", DbCodeLanguage.ToID(CodeLanguage));
 
             //Create reader
@@ -78,10 +81,10 @@ namespace CodeSnippet.Data.Database.Internal
                     switch (dateFilter)
                     {
                         case DateFilter.Newest:
-                            Temp.Sort((x, y) => DateTime.Compare(x._CreateDate, y._CreateDate));
+                             SortAscending(Temp);
                             break;
                         case DateFilter.Oldest:
-                            Temp.Sort((x, y) => DateTime.Compare(x._CreateDate, y._CreateDate));
+                            SortDescending(Temp);
                             break;
                     }
 
@@ -96,6 +99,7 @@ namespace CodeSnippet.Data.Database.Internal
             //By setting up a local variable
            // DateTime.Parse(_CreateDate)
         }
+        //Add new Snippet
         public static bool AddNewSnippet(SnippetInfo snippetInfo)
         {
             using (MySqlConnection connection = DbInfo.Connection())
@@ -132,6 +136,19 @@ namespace CodeSnippet.Data.Database.Internal
                     }
                 }
             }
+        }
+
+        //Sort Temp list on date
+        private static List<SnippetInfo> SortAscending(List<SnippetInfo> list)
+        {
+            list.Sort((a, b) => a._CreateDate.CompareTo(b._CreateDate));
+            return list;
+        }
+        //Sort Temp list on date
+        private static List<SnippetInfo> SortDescending(List<SnippetInfo> list)
+        {
+            list.Sort((a, b) => b._CreateDate.CompareTo(a._CreateDate));
+            return list;
         }
     }
 }

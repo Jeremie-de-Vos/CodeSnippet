@@ -256,9 +256,9 @@ namespace MyCodeSnipped
         }
         private void Database_btn_Click(object sender, RoutedEventArgs e)
         {
-            //MainMenuTabControl.SelectedIndex = 6;
-            Database page = new Database();
-            Content.Content = new Database();
+            MainMenuTabControl.SelectedIndex = 6;
+            // page = new Database();
+            //Content.Content = new Database();
         }
 
 

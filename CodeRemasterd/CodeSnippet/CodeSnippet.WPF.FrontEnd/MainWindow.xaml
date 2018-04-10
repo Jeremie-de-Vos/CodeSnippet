@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720.42" Width="444.8">
+        Title="MainWindow" Height="720.42" Width="831.2">
     <Grid  Background="#FF252323">
-        <Button x:Name="Test_btn" Content="Test" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Margin="34,594,38.4,46.2" Click="Test_btn_Click" />
+        <Button x:Name="Test_btn" Content="Test" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Margin="34,594,424.8,46.2" Click="Test_btn_Click" />
         <RichTextBox Name="Field" Background="{x:Null}" Foreground="LightGreen" HorizontalAlignment="Left" Height="565" Margin="34,10,0,0" VerticalAlignment="Top" Width="366" RenderTransformOrigin="0.206,-1.098">
             <FlowDocument>
                 <Paragraph>
@@ -15,5 +15,17 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        <RichTextBox x:Name="Results" Background="{x:Null}" Foreground="LightGreen" HorizontalAlignment="Left" Height="565" Margin="427,10,0,0" VerticalAlignment="Top" Width="366" RenderTransformOrigin="0.206,-1.098">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBox Name="SearchBox_Mysnipped_txb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextWrapping="NoWrap" FontSize="14" TextAlignment="Center" BorderThickness="0" RenderTransformOrigin="1.318,8.797" Margin="427,594,271.8,60.2" KeyDown="SearchBox_Mysnipped_txb_KeyDown"/>
+        <ComboBox Name="MySnipped_Languages_Cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FF323232" Margin="693,594,6.8,60.2" />
+        <ComboBox Name="MySnipped_Date_Cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FF323232" Margin="558,594,136.8,60.2" />
+        <ComboBox Name="MySnipped_Type_Cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FF323232" Margin="693,636,6.8,18.2" />
+
     </Grid>
 </Window>

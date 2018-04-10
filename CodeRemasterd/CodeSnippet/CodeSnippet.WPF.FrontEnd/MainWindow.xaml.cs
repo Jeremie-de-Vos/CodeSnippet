@@ -26,39 +26,44 @@ namespace CodeSnippet.WPF.FrontEnd
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            UserInfo.SetUserInfo(1);
+
+            //You can use SetUI.Functionname <------------------------
+            MySnipped_Languages_Cmb.Items.Add("All");
+            foreach(string date in Converter.GetAllDateFilterToStringArray())
+                MySnipped_Date_Cmb.Items.Add(date);
+            foreach (string type in Converter.GetAllTypeFilterToStringArray())
+                MySnipped_Type_Cmb.Items.Add(type);
+            foreach (string type in DbCodeLanguage.GetallLanguages())
+                MySnipped_Languages_Cmb.Items.Add(type);
+
+            MySnipped_Date_Cmb.SelectedIndex = 0;
+            MySnipped_Type_Cmb.SelectedIndex = 0;
+            MySnipped_Languages_Cmb.SelectedIndex = 0;
         }
 
         private void Test_btn_Click(object sender, RoutedEventArgs e)
         {
-            UserInfo.SetUserInfo(1);
             Field.Document.Blocks.Clear();
             //foreach (string i in Converter.GetAllDateFilterToStringArray())
             //Field.AppendText(Environment.NewLine+"- " + System.DateTime.Now.ToString());
+        }
 
-            int ExamplePerLanguage = 2;
-            for (int l = 0; l < DbCodeLanguage.GetallLanguages().Count; l++)
+        private void SearchBox_Mysnipped_txb_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
             {
-                for (int examples = 0; examples < ExamplePerLanguage; examples++)
-                {
-                    SnippetInfo snippetInfo = new SnippetInfo(
-                        9999,
-                        UserInfo.Userinformation.ID,
-                        9999,
-                        "Name" + examples,
-                        "Code" + examples,
-                        DateTime.Now,
-                        "Usage" + examples,
-                        DateTime.Now,
-                        "Description" + examples,
-                        DateTime.Now,
-                        DbCodeLanguage.ToID(DbCodeLanguage.GetallLanguages()[l]),
-                        DateTime.Now
-                        );
-                    System.Threading.Thread.Sleep(1000);
+                MessageBox.Show(Converter.StringToDateFilter(MySnipped_Date_Cmb.SelectedItem.ToString()).ToString());
+                List<SnippetInfo> snippets = DbSnippets.GetFilteredSnippeds(
+                    SearchBox_Mysnipped_txb.Text,
+                    MySnipped_Languages_Cmb.SelectedItem.ToString(),
+                    Converter.StringToDateFilter(MySnipped_Date_Cmb.SelectedItem.ToString()),
+                    Converter.StringToTypefilter(MySnipped_Type_Cmb.SelectedItem.ToString())
+                    );
 
-                    if(DbSnippets.AddNewSnippet(snippetInfo))
-                        Field.AppendText(Environment.NewLine + "- " + snippetInfo._Name + " in " + DbCodeLanguage.ToString(snippetInfo._LanguageID));
-                }
+                Results.Document.Blocks.Clear();
+                for (int i = 0; i < snippets.Count; i++)
+                    Results.AppendText(Environment.NewLine + "- " + snippets[i]._Name + " "+DbCodeLanguage.ToString(snippets[i]._LanguageID)+" " + snippets[i]._CreateDate);
             }
         }
     }
