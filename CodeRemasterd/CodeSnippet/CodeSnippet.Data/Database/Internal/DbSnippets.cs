@@ -11,7 +11,7 @@ namespace CodeSnippet.Data.Database.Internal
 {
     public class DbSnippets
     {
-        //-------------------------Filterd------------------------------
+        //-------------------------Filter------------------------------
         //Filter out all codesnippets
         public static List<SnippetInfo> GetFilteredSnippeds(string name, string CodeLanguage, DateFilter dateFilter, TypeFilter typeFilter)
         {

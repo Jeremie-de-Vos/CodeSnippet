@@ -5,15 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd.Windows"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
-    <Grid>
-        <RichTextBox HorizontalAlignment="Left" Height="100" Margin="365,165,0,0" VerticalAlignment="Top" Width="100">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+        Title="Login" Height="510" Width="447.2">
 
+    <Grid Background="#FF252323">
+        <Canvas>
+            <TextBox Name="LoginName_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="118" Canvas.Top="160"/>
+            <TextBox Name="Password_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="118" Canvas.Top="203"/>
+            <Button x:Name="Login_btn" Content="Login" Width="204" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Canvas.Left="118" Canvas.Top="285"/>
+            <Button x:Name="Register_btn" Content="Register" Width="99" Height="25" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF252323"  Canvas.Left="167" Canvas.Top="330" BorderThickness="0,0,0,1"/>
+        </Canvas>
     </Grid>
 </Window>

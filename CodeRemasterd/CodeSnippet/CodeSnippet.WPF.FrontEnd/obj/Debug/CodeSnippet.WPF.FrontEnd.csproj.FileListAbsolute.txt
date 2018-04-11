@@ -50,3 +50,11 @@ D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeS
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\CodeSnippet.WPF.FrontEnd.pdb
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\MainWindow.g.cs
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\MainWindow.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\CodeLanguage.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\ExternalDatabase.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\Snippet.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\Tag.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\CodeLanguage.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\ExternalDatabase.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\Snippet.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\Tag.baml

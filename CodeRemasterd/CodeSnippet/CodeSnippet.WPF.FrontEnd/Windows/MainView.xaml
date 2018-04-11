@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd.Windows"
         mc:Ignorable="d"
         Title="MainView" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF252323">
         
     </Grid>
 </Window>

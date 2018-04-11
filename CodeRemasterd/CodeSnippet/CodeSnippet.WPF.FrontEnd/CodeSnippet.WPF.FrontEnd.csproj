@@ -70,6 +70,18 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\CRUD\CodeLanguage.xaml.cs">
+      <DependentUpon>CodeLanguage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CRUD\ExternalDatabase.xaml.cs">
+      <DependentUpon>ExternalDatabase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CRUD\Snippet.xaml.cs">
+      <DependentUpon>Snippet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CRUD\Tag.xaml.cs">
+      <DependentUpon>Tag.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -84,6 +96,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CRUD\CodeLanguage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CRUD\ExternalDatabase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CRUD\Snippet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CRUD\Tag.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

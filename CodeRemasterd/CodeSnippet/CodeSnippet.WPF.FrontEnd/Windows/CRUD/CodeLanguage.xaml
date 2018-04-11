@@ -1,0 +1,19 @@
+﻿<Window x:Class="CodeSnippet.WPF.FrontEnd.Windows.CRUD.CodeLanguage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd.Windows.CRUD"
+        mc:Ignorable="d"
+        Title="Code Language" Height="253.2" Width="388">
+
+    <Grid Background="#FF252323">
+        <Canvas>
+            <TextBox Name="Language_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="136" Canvas.Top="59"/>
+            <Label Content="CodeLanguage:" Canvas.Left="39" Canvas.Top="59" Foreground="#FFFAF8F8" FontWeight="Bold"/>
+
+            <Button x:Name="Submit_btn" Content="Add" Width="204" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Canvas.Left="90" Canvas.Top="126" Click="Submit_btn_Click"/>
+            <Button x:Name="Back_btn" Content="Back" Width="100" Height="25" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF252323"  Canvas.Left="138" Canvas.Top="170" BorderThickness="0,0,0,1"/>
+        </Canvas>
+    </Grid>
+</Window>

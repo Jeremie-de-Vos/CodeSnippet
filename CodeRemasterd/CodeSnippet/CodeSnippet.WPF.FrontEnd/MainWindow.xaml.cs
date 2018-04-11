@@ -2,6 +2,7 @@
 using CodeSnippet.Data.Converter;
 using CodeSnippet.Data.Database.External;
 using CodeSnippet.Data.Database.Internal;
+using CodeSnippet.WPF.FrontEnd.Windows.CRUD;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,6 +92,34 @@ namespace CodeSnippet.WPF.FrontEnd
             for (int i = 0; i < snippets.Count; i++)
                 Results.AppendText(Environment.NewLine + "- " + snippets[i]._Name + " " + DbCodeLanguage.ToString(snippets[i]._LanguageID) + " " + snippets[i]._CreateDate);
 
+        }
+
+
+
+        DatabaseInfo dbDummy = new DatabaseInfo(0, "TestDummy", "TestDummy", "TestDummy", "TestDummy");
+        TagInfo TagDummy = new TagInfo(0, "TestDummy");
+        CodeLanguageInfo LanguageDummy = new CodeLanguageInfo(0, "TestDummy");
+
+
+
+        //-------------------------External-Database------------------------------
+        private void DbAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //ExternalDatabase wd = new ExternalDatabase(CRUDFunctionalitie.Add, null);
+            //Tag wd = new Tag(CRUDFunctionalitie.Add, null);
+            CodeLanguage wd = new CodeLanguage(CRUDFunctionalitie.Add, null);
+        }
+        private void DbUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            //ExternalDatabase wd = new ExternalDatabase(CRUDFunctionalitie.Update, dbDummy);
+            //Tag wd = new Tag(CRUDFunctionalitie.Update, TagDummy);
+            CodeLanguage wd = new CodeLanguage(CRUDFunctionalitie.Update, LanguageDummy);
+        }
+        private void DbDelete_Click(object sender, RoutedEventArgs e)
+        {
+            //ExternalDatabase wd = new ExternalDatabase(CRUDFunctionalitie.Delete, dbDummy);
+            //Tag wd = new Tag(CRUDFunctionalitie.Delete, TagDummy);
+            CodeLanguage wd = new CodeLanguage(CRUDFunctionalitie.Delete, LanguageDummy);
         }
 
 

@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd.Windows"
         mc:Ignorable="d"
-        Title="Register" Height="450" Width="800">
-    <Grid>
-        
+        Title="Register" Height="536.207" Width="416.165">
+
+    <Grid Background="#FF252323">
+        <Canvas>
+            <TextBox Name="FirstName_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="120" Canvas.Top="91"/>
+            <TextBox Name="MiddleName_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="120" Canvas.Top="126"/>
+            <TextBox x:Name="LastName_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="120" Canvas.Top="161"/>
+            <TextBox x:Name="Email_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="120" Canvas.Top="205"/>
+            <TextBox x:Name="Password_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="121" Canvas.Top="245"/>
+            <TextBox x:Name="PasswordSecond_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="121" Canvas.Top="281"/>
+
+            <Label Content="Firstname:" Canvas.Left="34" Canvas.Top="96" Foreground="#FFFAF8F8" FontWeight="Bold"/>
+            <Label Content="Middlename:" Canvas.Left="18" Canvas.Top="130" Foreground="#FFFAF8F8" FontWeight="Bold"/>
+            <Label Content="LastName:" Canvas.Left="34" Canvas.Top="165" Foreground="#FFFAF8F8" FontWeight="Bold"/>
+            <Label Content="Email:" Canvas.Left="59" Canvas.Top="205" Foreground="#FFFAF8F8" FontWeight="Bold"/>
+            <Label Content="Password:" Canvas.Left="37" Canvas.Top="245" Foreground="#FFFAF8F8" FontWeight="Bold"/>
+            <Label Content="Pass Again:" Canvas.Left="29" Canvas.Top="281" Foreground="#FFFAF8F8" FontWeight="Bold"/>
+
+            <Button x:Name="Register_btn" Content="Register" Width="204" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Canvas.Left="119" Canvas.Top="366"/>
+            <Button x:Name="Back_btn" Content="Back" Width="100" Height="25" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF252323"  Canvas.Left="167" Canvas.Top="411" BorderThickness="0,0,0,1"/>
+        </Canvas>
     </Grid>
 </Window>
