@@ -8,6 +8,7 @@ namespace CodeSnippet.Data.Database.External
 {
     public class GetDbInfo
     {
+        //-------------------------Get-------------------------------
         //Get table names | Using DB name
         public static List<string> GetTableNames(string DBName)
         {
@@ -44,6 +45,8 @@ namespace CodeSnippet.Data.Database.External
             return temp;
         }
 
+
+        //-------------------------Status------------------------------
         //Get database Status
         public static DBStatus SetDatabaseStatus(string DBName)
         {
@@ -86,11 +89,131 @@ namespace CodeSnippet.Data.Database.External
             }
         }
 
-        //Crud
+
+        //-------------------------CRUD--------------------------------
+        //Add new Database
+        public static void AddNewDatabase(DatabaseInfo Databaseinfo)
+        {
+            //Create Connection
+            using (MySqlConnection connection = DbInfo.Connection())
+            {
+                //Create cmd
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandType = CommandType.Text;
+
+                    //Create CommandText
+                    cmd.CommandText = "INSERT INTO `databases`(`ID`, `Datasource`, `Username`, `Password`, `Databasename`) " +
+                        "VALUES (@ID,@Datasource,@Username,@Password,@Databasename)";
+
+                    //Set Parameters
+                    cmd.Parameters.AddWithValue("@ID", "");
+                    cmd.Parameters.AddWithValue("@Datasource", Databaseinfo.DataSource);
+                    cmd.Parameters.AddWithValue("@Username", Databaseinfo.Username);
+                    cmd.Parameters.AddWithValue("@Password", Databaseinfo.Password);
+                    cmd.Parameters.AddWithValue("@Databasename", Databaseinfo.DatabaseName);
+
+                    try
+                    {
+                        int recordsAffected = cmd.ExecuteNonQuery();
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+        }
+        //Update new Database
+        public static void UpdateDatabase(DatabaseInfo Databaseinfo)
+        {
+            //Create Connection
+            using (MySqlConnection connection = DbInfo.Connection())
+            {
+                //Create Cmd
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandType = CommandType.Text;
+
+                    //Create CommandText
+                    cmd.CommandText = "UPDATE `databases` SET " +
+                        "`Datasource`=[value-2]," +
+                        "`Username`=[value-3]," +
+                        "`Password`=[value-4]," +
+                        "`Databasename`=[value-5]" +
+                        " WHERE `ID`=@ID";
+
+                    //Set Parameters
+                    cmd.Parameters.AddWithValue("@ID", Databaseinfo.ID);
+                    cmd.Parameters.AddWithValue("@Datasource", Databaseinfo.DataSource);
+                    cmd.Parameters.AddWithValue("@Username", Databaseinfo.Username);
+                    cmd.Parameters.AddWithValue("@Password", Databaseinfo.Password);
+                    cmd.Parameters.AddWithValue("@Databasename", Databaseinfo.DatabaseName);
+
+                    try
+                    {
+                        int recordsAffected = cmd.ExecuteNonQuery();
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+        }
+        //Delete new Database
+        public static void DeleteDatabase(int ID)
+        {
+            //Create Connection
+            using (MySqlConnection connection = DbInfo.Connection())
+            {
+                //Create Cmd
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.Connection = connection;
+                    cmd.CommandType = CommandType.Text;
+
+                    //Set CommandText
+                    cmd.CommandText = "DELETE FROM `databases` WHERE `ID` = @ID";
+
+                    //Add Parameters
+                    cmd.Parameters.AddWithValue("@ID", ID);
+
+                    try
+                    {
+                        int recordsAffected = cmd.ExecuteNonQuery();
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+        }
     }
+    //------Enum-ClassInfo-------
     public enum DBStatus
     {
         Error,
         Oke
+    }
+    public class DatabaseInfo
+    {
+        public int ID;
+        public string DataSource;
+        public string Username;
+        public string Password;
+        public string DatabaseName;
+
+        public DatabaseInfo(int _ID, string _DataSource, string _Username, string _Password, string _DatabaseName)
+        {
+            ID = _ID;
+            DataSource = _DataSource;
+            Username = _Username;
+            Password = _Password;
+            DatabaseName = _DatabaseName;
+        }
     }
 }

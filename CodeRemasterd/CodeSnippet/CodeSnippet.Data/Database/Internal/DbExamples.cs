@@ -27,7 +27,7 @@ namespace CodeSnippet.Data.Database.Internal
                         DateTime.Now,
                         "Description" + examples,
                         DateTime.Now,
-                        DbCodeLanguage.ToID(DbCodeLanguage.GetallLanguages()[l]),//<-------------
+                        DbCodeLanguage.GetallLanguages()[l].ID,//<-------------
                         DateTime.Now
                         );
                     System.Threading.Thread.Sleep(1000);

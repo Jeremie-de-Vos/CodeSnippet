@@ -44,6 +44,7 @@ namespace CodeSnippet.Data.Database.Internal
         }
     }
 }
+//------Enum-ClassInfo-------
 public class UserInfoClass
 {
     public int ID;

@@ -11,6 +11,7 @@ namespace CodeSnippet.Data.Database.Internal
 {
     public class DbSnippets
     {
+        //-------------------------Filterd------------------------------
         //Filter out all codesnippets
         public static List<SnippetInfo> GetFilteredSnippeds(string name, string CodeLanguage, DateFilter dateFilter, TypeFilter typeFilter)
         {
@@ -102,7 +103,6 @@ namespace CodeSnippet.Data.Database.Internal
             //Return Temp List
             return Temp;
         }
-
         //Sort Temp list on date
         private static List<SnippetInfo> SortAscending(List<SnippetInfo> list)
         {
@@ -115,7 +115,6 @@ namespace CodeSnippet.Data.Database.Internal
             list.Sort((a, b) => b._CreateDate.CompareTo(a._CreateDate));
             return list;
         }
-
 
 
         //-------------------------CRUD------------------------------
@@ -230,6 +229,7 @@ namespace CodeSnippet.Data.Database.Internal
         }
     }
 }
+//------Enum-ClassInfo-------
 public class SnippetInfo
 {
     public int _ID;

@@ -11,6 +11,7 @@ namespace CodeSnippet.Data.LoginRegister
 {
     public class Register
     {
+        //Register a New User
         private void RegisterNow(RegisterInfo registerInfo)
         {
             using (MySqlConnection connection = DbInfo.Connection())
@@ -46,6 +47,7 @@ namespace CodeSnippet.Data.LoginRegister
         }
     }
 }
+//------Enum-ClassInfo-------
 public class RegisterInfo
 {
     public string firstname;

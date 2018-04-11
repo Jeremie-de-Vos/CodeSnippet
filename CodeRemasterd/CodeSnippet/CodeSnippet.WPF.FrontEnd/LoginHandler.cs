@@ -8,8 +8,11 @@ namespace CodeSnippet.WPF.FrontEnd
 {
     public class LoginHandler
     {
+        //Variable
         private static List<LoginDB> DB_Info = new List<LoginDB>();
 
+        //-------------------------Main-Executer-------------------------
+        //Login-Executer
         public static void LoginNow(string Username, string Password, Window loginform)
         {
             //Loading tables
@@ -79,6 +82,10 @@ namespace CodeSnippet.WPF.FrontEnd
             if (!match)
                 MessageBox.Show("There was no match found in the following tables: \n" + LoadedTables_ToString());
         }
+
+        
+        //-------------------------LoadingData------------------------------
+        //Add new table for rolplay based system
         private static void LoadTables()
         {
             //clear list first
@@ -89,7 +96,7 @@ namespace CodeSnippet.WPF.FrontEnd
             DB_Info.Add(new LoginDB("users", mainwindows, "ID", "Firstname", "Password"));
 
         }
-
+        //Add the Form Related to a Table For rolplay based
         private static void OpenForm(LoginDB Info)
         {
             switch (Info.WinodowToOpen)
@@ -102,6 +109,9 @@ namespace CodeSnippet.WPF.FrontEnd
             }
         }
 
+
+        //-------------------------Builders------------------------------
+        //Where Builder Builds a where string related to the table that is being checked
         private static string WHERE_builder(List<DBrelation> list)
         {
             string sentence = "";
@@ -118,6 +128,7 @@ namespace CodeSnippet.WPF.FrontEnd
             }
             return sentence;
         }
+        //Get all Loaded Tables if there was no table found
         private static string LoadedTables_ToString()
         {
             string sentence = string.Empty;
@@ -134,6 +145,7 @@ namespace CodeSnippet.WPF.FrontEnd
         }
     }
 }
+//------Enum-ClassInfo-------
 public class LoginDB
 {
     //Db Info

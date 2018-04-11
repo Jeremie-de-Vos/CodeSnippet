@@ -1,4 +1,5 @@
-﻿using CodeSnippet.Data.Converter;
+﻿using CodeSnippet.Data;
+using CodeSnippet.Data.Converter;
 using CodeSnippet.Data.Database.External;
 using CodeSnippet.Data.Database.Internal;
 using System;
@@ -22,9 +23,9 @@ namespace CodeSnippet.WPF.FrontEnd
     /// </summary>
     public partial class MainWindow : Window
     {
+        //-------------------------Main------------------------------
         //Prefending startup errors
         bool startup = false;
-
         //Main
         public MainWindow()
         {
@@ -32,14 +33,9 @@ namespace CodeSnippet.WPF.FrontEnd
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             UserInfo.SetUserInfo(1);
 
-            //You can use SetUI.Functionname <------------------------
-            MySnipped_Languages_Cmb.Items.Add("All");
-            foreach(string date in Converter.GetAllDateFilterToStringArray())
-                MySnipped_Date_Cmb.Items.Add(date);
-            foreach (string type in Converter.GetAllTypeFilterToStringArray())
-                MySnipped_Type_Cmb.Items.Add(type);
-            foreach (string type in DbCodeLanguage.GetallLanguages())
-                MySnipped_Languages_Cmb.Items.Add(type);
+            SetUI.DatesToCombobox(MySnipped_Date_Cmb);
+            SetUI.CodeLanguageToCombobox(MySnipped_Languages_Cmb);
+            SetUI.TypeToCombobox(MySnipped_Type_Cmb);
 
             MySnipped_Date_Cmb.SelectedIndex = 0;
             MySnipped_Type_Cmb.SelectedIndex = 0;
@@ -48,12 +44,11 @@ namespace CodeSnippet.WPF.FrontEnd
             startup = true;
         }
 
+        //-------------------------Test------------------------------
         //TestButton Clicked
         private void Test_btn_Click(object sender, RoutedEventArgs e)
         {
             Field.Document.Blocks.Clear();
-            //foreach (string i in Converter.GetAllDateFilterToStringArray())
-            //Field.AppendText(Environment.NewLine+"- " + System.DateTime.Now.ToString());
         }
         //SearchBox if Enter is pressed
         private void SearchBox_Mysnipped_txb_KeyDown(object sender, KeyEventArgs e)
@@ -62,6 +57,7 @@ namespace CodeSnippet.WPF.FrontEnd
                 FilterCodeSnippeds();
         }
 
+        //-------------------------Filters------------------------------
         //Cmb Selection changed
         private void MySnipped_Date_Cmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -96,5 +92,13 @@ namespace CodeSnippet.WPF.FrontEnd
                 Results.AppendText(Environment.NewLine + "- " + snippets[i]._Name + " " + DbCodeLanguage.ToString(snippets[i]._LanguageID) + " " + snippets[i]._CreateDate);
 
         }
+
+
+
+
+
+
+        //foreach (string i in Converter.GetAllDateFilterToStringArray())
+        //Field.AppendText(Environment.NewLine+"- " + System.DateTime.Now.ToString());
     }
 }

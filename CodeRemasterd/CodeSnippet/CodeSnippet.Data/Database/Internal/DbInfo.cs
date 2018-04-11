@@ -9,6 +9,7 @@ namespace CodeSnippet.Data.Database.Internal
 {
     public class DbInfo
     {
+        //-------------------------DatabaseInfo------------------------------
         //Database-Variable
         private static string datasource = "localhost";
         private static string username = "root";
@@ -16,6 +17,9 @@ namespace CodeSnippet.Data.Database.Internal
         private static string database = "mycodesnippet";
         private static string ConString = "datasource = " + datasource + "; username = " + username + "; password=" + password + "; database = " + database;
 
+
+        //-------------------------Connection------------------------------
+        //Create a new connection for this database
         public static MySqlConnection Connection()
         {
             MySqlConnection connection = new MySqlConnection(ConString);

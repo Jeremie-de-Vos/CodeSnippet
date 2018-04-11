@@ -10,6 +10,7 @@ namespace CodeSnippet.Data.Database.Internal
 {
     public class DbTags
     {
+        //-------------------------Get------------------------------
         //Returns a list with all Tags in Database
         public static List<TagInfo> GetAllTags()
         {
@@ -35,7 +36,6 @@ namespace CodeSnippet.Data.Database.Internal
             return Temp;
         }
         //Get all tags related to snipped ID
-
 
 
         //-------------------------CRUD------------------------------
@@ -130,6 +130,7 @@ namespace CodeSnippet.Data.Database.Internal
         }
     }
 }
+//------Enum-ClassInfo-------
 public class TagInfo
 {
     public int ID;

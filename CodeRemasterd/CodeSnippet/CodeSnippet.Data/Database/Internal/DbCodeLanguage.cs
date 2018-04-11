@@ -10,11 +10,12 @@ namespace CodeSnippet.Data.Database.Internal
 {
     public class DbCodeLanguage
     {
+        //-------------------------Get------------------------------
         //Get all Programming Languages in Database
-        public static List<CodeLaguageInfo> GetallLanguages()
+        public static List<CodeLanguageInfo> GetallLanguages()
         {
             //Setup a temp list
-            List<CodeLaguageInfo> Temp = new List<CodeLaguageInfo>();
+            List<CodeLanguageInfo> Temp = new List<CodeLanguageInfo>();
 
             //create connection and open it
             MySqlConnection connection = DbInfo.Connection();
@@ -30,12 +31,14 @@ namespace CodeSnippet.Data.Database.Internal
 
             //if match is found
             while (reader.Read())
-                Temp.Add(new CodeLaguageInfo(int.Parse(reader["Name"].ToString()),reader["Name"].ToString()));
+                Temp.Add(new CodeLanguageInfo(int.Parse(reader["ID"].ToString()),reader["Name"].ToString()));
 
             //Return The temp list
             return Temp;
         }
 
+
+        //-------------------------Converters------------------------------
         //Convert a Language Name To a ID from Database
         public static int ToID(string LanguageName)
         {
@@ -86,7 +89,7 @@ namespace CodeSnippet.Data.Database.Internal
 
         //-------------------------CRUD------------------------------
         //Add new CodeLanguage
-        public static void AddNewCodeLanguage(CodeLaguageInfo Languageinfo)
+        public static void AddNewCodeLanguage(CodeLanguageInfo Languageinfo)
         {
             //Create Connection
             using (MySqlConnection connection = DbInfo.Connection())
@@ -116,7 +119,7 @@ namespace CodeSnippet.Data.Database.Internal
             }
         }
         //Update new CodeLanguage
-        public static void UpdateCodeLanguage(CodeLaguageInfo Languageinfo)
+        public static void UpdateCodeLanguage(CodeLanguageInfo Languageinfo)
         {
             //Create Connection
             using (MySqlConnection connection = DbInfo.Connection())
@@ -176,11 +179,12 @@ namespace CodeSnippet.Data.Database.Internal
         }
     }
 }
-public class CodeLaguageInfo
+//------Enum-ClassInfo-------
+public class CodeLanguageInfo
 {
     public int ID;
     public string Name;
-    public CodeLaguageInfo(int _ID, string _Name)
+    public CodeLanguageInfo(int _ID, string _Name)
     {
         ID = _ID;
         Name = _Name;
