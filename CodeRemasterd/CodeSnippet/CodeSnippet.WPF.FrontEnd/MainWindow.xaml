@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd"
+        xmlns:data="clr-namespace:CodeSnippet.WPF.FrontEnd"
         mc:Ignorable="d"
         Title="MainWindow" Height="720.42" Width="1171.6">
     <Grid  Background="#FF252323">
@@ -16,7 +17,20 @@
 
 
 
+        <ListBox Name="CodeSnippetsCintainer" Background="#FF252323" Margin="724,82,9.8,116.2" HorizontalAlignment="Stretch" IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Items}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Text="{Binding Path=Name}"  Margin="1" Width="100" Height="auto" Foreground="#FFFAF8F8" FontWeight="Bold"/>
+                        <TextBlock  Text=""  Margin="1" Width="auto" Height="auto" Foreground="#FFFAF8F8" FontWeight="Bold"/>
 
+                        <Button Content="Add" Width="80" Margin="1" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black"/>
+                        <Button Content="Update" Width="80" Margin="1" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black"/>
+                        <Button Content="Delete" Width="80" Margin="1" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
 
         <RichTextBox Name="Field" VerticalScrollBarVisibility="Visible" Background="{x:Null}" Foreground="LightGreen" HorizontalAlignment="Left" Height="565" Margin="34,10,0,0" VerticalAlignment="Top" Width="366" RenderTransformOrigin="0.206,-1.098">
@@ -26,14 +40,14 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox x:Name="Results" VerticalScrollBarVisibility="Visible" Background="{x:Null}" Foreground="LightGreen" HorizontalAlignment="Left" Height="565" Margin="427,10,0,0" VerticalAlignment="Top" Width="366" RenderTransformOrigin="0.206,-1.098">
+        <RichTextBox x:Name="Results" VerticalScrollBarVisibility="Visible" Background="{x:Null}" Foreground="LightGreen" HorizontalAlignment="Left" Height="565" Margin="427,10,0,0" VerticalAlignment="Top" Width="292" RenderTransformOrigin="0.206,-1.098">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="RichTextBox"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <TextBox Name="SearchBox_Mysnipped_txb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextWrapping="NoWrap" FontSize="14" TextAlignment="Center" BorderThickness="0" RenderTransformOrigin="1.318,8.797" Margin="427,636,371.8,18.2" KeyDown="SearchBox_Mysnipped_txb_KeyDown"/>
+        <TextBox Name="SearchBox_Mysnipped_txb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextWrapping="NoWrap" FontSize="14" TextAlignment="Center" BorderThickness="0" RenderTransformOrigin="1.318,8.797" Margin="427,636,371.8,18.2" KeyDown="SearchBox_Mysnipped_txb_KeyDown" TextChanged="SearchBox_Mysnipped_txb_TextChanged"/>
         <ComboBox Name="MySnipped_Languages_Cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FF323232" Margin="693,594,371.8,60.2" SelectionChanged="MySnipped_Languages_Cmb_SelectionChanged" />
         <ComboBox Name="MySnipped_Date_Cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FF323232" Margin="558,594,476.8,60.2" SelectionChanged="MySnipped_Date_Cmb_SelectionChanged" />
         <ComboBox Name="MySnipped_Type_Cmb" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FF323232" Margin="427,594,611.8,60.2" SelectionChanged="MySnipped_Type_Cmb_SelectionChanged" />

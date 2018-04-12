@@ -79,7 +79,7 @@ namespace CodeSnippet.WPF.FrontEnd
         //Filter all the CodeSnippeds by the asigned Values
         private void FilterCodeSnippeds()
         {
-            //Give all filter values
+            //Give all filter values and recieve a list with Items
             List<SnippetInfo> snippets = DbSnippets.GetFilteredSnippeds(
             SearchBox_Mysnipped_txb.Text,
             MySnipped_Languages_Cmb.SelectedItem.ToString(),
@@ -88,9 +88,14 @@ namespace CodeSnippet.WPF.FrontEnd
             );
             //Clear RichTextBox
             Results.Document.Blocks.Clear();
-            //Forieach item show it in RichTextBox
+
+
+            List<SnippetUI> items = new List<SnippetUI>();
             for (int i = 0; i < snippets.Count; i++)
-                Results.AppendText(Environment.NewLine + "- " + snippets[i]._Name + " " + DbCodeLanguage.ToString(snippets[i]._LanguageID) + " " + snippets[i]._CreateDate);
+                items.Add(new SnippetUI(snippets[i]._Name, DbCodeLanguage.ToString(snippets[i]._LanguageID)));
+            
+            CodeSnippetsCintainer.ItemsSource = items;
+            //Results.AppendText(Environment.NewLine + "- " + snippets[i]._Name + " " + DbCodeLanguage.ToString(snippets[i]._LanguageID) + " " + snippets[i]._CreateDate);
 
         }
 
@@ -122,6 +127,11 @@ namespace CodeSnippet.WPF.FrontEnd
             CodeLanguage wd = new CodeLanguage(CRUDFunctionalitie.Delete, LanguageDummy);
         }
 
+        private void SearchBox_Mysnipped_txb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
 
 
 
@@ -129,5 +139,16 @@ namespace CodeSnippet.WPF.FrontEnd
 
         //foreach (string i in Converter.GetAllDateFilterToStringArray())
         //Field.AppendText(Environment.NewLine+"- " + System.DateTime.Now.ToString());
+    }
+}
+public class SnippetUI
+{
+    public string Name;
+    public string Language;
+
+    public SnippetUI(string _Name, string _Language)
+    {
+        Name = _Name;
+        Language = _Language;
     }
 }

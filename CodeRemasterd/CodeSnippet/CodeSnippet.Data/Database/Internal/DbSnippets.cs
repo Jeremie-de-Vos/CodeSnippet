@@ -117,6 +117,97 @@ namespace CodeSnippet.Data.Database.Internal
         }
 
 
+        //-------------------------Collections------------------------
+        //Convert a SnippetCollection Name To a ID from Database
+        public static int ToID(string SnippetCollectionName)
+        {
+
+            //create connection and open it
+            MySqlConnection connection = DbInfo.Connection();
+
+            //Build Mysql command
+            MySqlCommand cmd = connection.CreateCommand();
+
+            //Create and add Commandtext
+            cmd.CommandText = "SELECT `ID`, `Name` FROM `snippedcollection` WHERE `Name` = @Name";
+            cmd.Parameters.AddWithValue("@Name", SnippetCollectionName);
+
+            //Create reader
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            //if match is found
+            if (reader.Read())
+                return int.Parse(reader["ID"].ToString());
+            else
+                return 0;
+        }
+        //Convert a SnippetCollection ID To a Programming SnippetCollection from Database
+        public static string ToString(int ID)
+        {
+
+            //create connection and open it
+            MySqlConnection connection = DbInfo.Connection();
+
+            //Build Mysql command
+            MySqlCommand cmd = connection.CreateCommand();
+
+            //Create and add Commandtext
+            cmd.CommandText = "SELECT `ID`, `Name` FROM `snippedcollection` WHERE `ID` = @ID";
+            cmd.Parameters.AddWithValue("@ID", ID);
+
+            //Create reader
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            //if match is found
+            if (reader.Read())
+                return reader["Name"].ToString();
+            else
+                return "";
+        }
+        //Get SnippetInfo from ID
+        public static SnippetInfo GetSnippetInfoFromID(int ID)
+        {
+            //Create temp
+            SnippetInfo Temp = null;
+            
+            //create connection and open it
+            MySqlConnection connection = DbInfo.Connection();
+
+            //Build Mysql command
+            MySqlCommand cmd = connection.CreateCommand();
+
+            //Create and add Commandtext
+            cmd.CommandText = "SELECT `ID`, `UserID`, `TagCollectionID`, `Name`, `Code`, `CodeEditDate`, `UsageExample`, `UsageEditDate`, `Description`, `DescriptionEditDate`, `LanguageID`, `CreateDate` FROM `codesnippets` WHERE `ID` = @ID";
+            cmd.Parameters.AddWithValue("@ID", ID);
+
+            //Create reader
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            //if match is found
+            if (reader.Read())
+            {
+                //Save a new Temporary Snippet
+                SnippetInfo TempSnippet = (new SnippetInfo(
+                                    int.Parse(reader["ID"].ToString()),
+                                    int.Parse(reader["UserID"].ToString()),
+                                    int.Parse(reader["TagCollectionID"].ToString()),
+                                    reader["Name"].ToString(),
+                                    reader["Code"].ToString(),
+                                    DateTime.Parse(reader["CodeEditDate"].ToString()),
+                                    reader["UsageExample"].ToString(),
+                                    DateTime.Parse(reader["UsageEditDate"].ToString()),
+                                    reader["Description"].ToString(),
+                                    DateTime.Parse(reader["DescriptionEditDate"].ToString()),
+                                    int.Parse(reader["LanguageID"].ToString()),
+                                    DateTime.Parse(reader["CreateDate"].ToString())
+                                    ));
+            }
+
+            //Return value
+            return Temp;
+        }
+
+
         //-------------------------CRUD------------------------------
         //Add new Snippet
         public static void AddNewSnippet(SnippetInfo snippetInfo)
