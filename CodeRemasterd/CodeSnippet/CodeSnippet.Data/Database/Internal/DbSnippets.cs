@@ -164,6 +164,7 @@ namespace CodeSnippet.Data.Database.Internal
             else
                 return "";
         }
+
         //Get SnippetInfo from ID
         public static SnippetInfo GetSnippetInfoFromID(int ID)
         {

@@ -5,8 +5,88 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd.Windows"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="800">
+        Title="MainView" Height="1280" Width="1920">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="NavigationButton">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="#FFF7F1F1"/>
+            <Setter Property="BorderBrush" Value="#FF707070"/>
+            <Setter Property="Background" Value="#FF323232"/>
+            <Setter Property="OpacityMask" Value="Black"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="Label">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </Window.Resources>
+    
+    
     <Grid Background="#FF252323">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--LeftTop-->
+        <DockPanel Grid.Row="0" Grid.Column="0" Background="#FF2F2F2F">
+            <Label Content="CodeSnippet" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Transparent" Foreground="#FFF7F1F1" FontSize="14"/>
+        </DockPanel>
+
+        <!--TopBar-->
+        <StackPanel Name="NavigationBar" Orientation="Horizontal" Grid.Row="0" Grid.Column="1" Background="#FF1E1E1F">
+        </StackPanel>
+
+        <!--SideBar-->
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="#FF1E1E1F">
+            <!--UserInfo-->
+            <Grid Height="200">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Canvas Name="ProfileImage" Grid.Row="1" Grid.RowSpan="2" Background="Beige" Margin="10,2,2,2"/>
+                <Label Name="Fullname_lbl" Content="Jeremie de vos" Grid.Column="1" Grid.Row="1" Style="{StaticResource Label}"/>
+                <Label Name="Email_lbl" Content="Jeremiedevos1999@gmail.com" Grid.Column="1" Grid.Row="2" Style="{StaticResource Label}" FontSize="10"/>
+            </Grid>
+
+            <!--Main Navigation-->
+            <TextBox Text="Search!" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="40" Background="#FF1B1B1B" Foreground="White"/>
+
+            <!--Buttons-->
+            <Button Content="Profile" Style="{StaticResource NavigationButton}"/>
+            <Button Content="Settings" Style="{StaticResource NavigationButton}"/>
+            <Canvas Height="7"/>
+            <Button Content="Projects" Style="{StaticResource NavigationButton}"/>
+            <Button Content="Snippets" Style="{StaticResource NavigationButton}"/>
+            <Canvas Height="7"/>
+            <Button Content="DashBoard" Style="{StaticResource NavigationButton}"/>
+            <Button Content="MyData" Style="{StaticResource NavigationButton}"/>
+            <Button Content="Files" Style="{StaticResource NavigationButton}"/>
+        </StackPanel>
+
+        <!--Content-->
+        <StackPanel Name="Contentt" Grid.Row="1" Grid.Column="1">
+
+        </StackPanel>
     </Grid>
 </Window>

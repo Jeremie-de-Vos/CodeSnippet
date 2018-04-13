@@ -2,6 +2,7 @@
 using CodeSnippet.Data.Converter;
 using CodeSnippet.Data.Database.External;
 using CodeSnippet.Data.Database.Internal;
+using CodeSnippet.WPF.FrontEnd.Windows;
 using CodeSnippet.WPF.FrontEnd.Windows.CRUD;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,10 @@ namespace CodeSnippet.WPF.FrontEnd
             MySnipped_Date_Cmb.SelectedIndex = 0;
             MySnipped_Type_Cmb.SelectedIndex = 0;
             MySnipped_Languages_Cmb.SelectedIndex = 0;
+
+            MainView wd = new MainView();
+            wd.Show();
+            this.Close();
 
             startup = true;
         }
@@ -95,8 +100,6 @@ namespace CodeSnippet.WPF.FrontEnd
                 items.Add(new SnippetUI(snippets[i]._Name, DbCodeLanguage.ToString(snippets[i]._LanguageID)));
             
             CodeSnippetsCintainer.ItemsSource = items;
-            //Results.AppendText(Environment.NewLine + "- " + snippets[i]._Name + " " + DbCodeLanguage.ToString(snippets[i]._LanguageID) + " " + snippets[i]._CreateDate);
-
         }
 
 

@@ -58,3 +58,11 @@ D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeS
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\ExternalDatabase.baml
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\Snippet.baml
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\CRUD\Tag.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Pages\test.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Pages\test.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\NavigationBars\NavbarTest.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\NavigationBars\NavbarTest.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Pages\SnippetsPage.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Pages\SnippetsPage.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\NavigationBars\NavBarSnippet.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\NavigationBars\NavBarSnippet.baml

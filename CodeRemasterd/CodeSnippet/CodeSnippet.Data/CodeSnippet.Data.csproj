@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Converter\Converter.cs" />
     <Compile Include="Database\Internal\DbCodeLanguage.cs" />
+    <Compile Include="Database\Internal\DbSnippetCollection.cs" />
     <Compile Include="Database\Internal\DbSnippets.cs" />
     <Compile Include="Database\Internal\DbTags.cs" />
     <Compile Include="Database\Internal\DbExamples.cs" />
