@@ -73,15 +73,15 @@
             <TextBox Text="Search!" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="40" Background="#FF1B1B1B" Foreground="White"/>
 
             <!--Buttons-->
-            <Button Content="Profile" Style="{StaticResource NavigationButton}"/>
-            <Button Content="Settings" Style="{StaticResource NavigationButton}"/>
+            <Button Name="NavProfile" Content="Profile" Style="{StaticResource NavigationButton}"/>
+            <Button Name="NavSettings" Content="Settings" Style="{StaticResource NavigationButton}"/>
             <Canvas Height="7"/>
-            <Button Content="Projects" Style="{StaticResource NavigationButton}"/>
-            <Button Content="Snippets" Style="{StaticResource NavigationButton}"/>
+            <Button Name="NavProjects" Content="Projects" Style="{StaticResource NavigationButton}"/>
+            <Button Name="NavSnippet" Content="Snippets" Style="{StaticResource NavigationButton}" Click="NavSnippet_Click"/>
             <Canvas Height="7"/>
-            <Button Content="DashBoard" Style="{StaticResource NavigationButton}"/>
-            <Button Content="MyData" Style="{StaticResource NavigationButton}"/>
-            <Button Content="Files" Style="{StaticResource NavigationButton}"/>
+            <Button Name="NavDashBoard" Content="DashBoard" Style="{StaticResource NavigationButton}"/>
+            <Button Name="NavMyData" Content="MyData" Style="{StaticResource NavigationButton}"/>
+            <Button Name="NavFiles" Content="Files" Style="{StaticResource NavigationButton}"/>
         </StackPanel>
 
         <!--Content-->

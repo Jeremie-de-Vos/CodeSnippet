@@ -4,10 +4,70 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd.Windows.Pages"
-             mc:Ignorable="d" Width="1700" Height="1235">
+             mc:Ignorable="d" Width="1424.8" Height="905.4">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        
+        
+        
+
+        <!--Code snippets-->
+        <StackPanel Name="MainContainer" CanVerticallyScroll="True" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="40" Background="#FF323232">
+            <StackPanel Height="30" Background="#FF494949">
+                <Label Content="Code Snippets" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <!--Item Container-->
+            <ScrollViewer Name="Scroller" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
+                <StackPanel Name="Containerr" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
+            </ScrollViewer>
+        </StackPanel>
+
+        
+        
+        
+        
+        <!--Code Viewer-->
+        <Grid Name="DetailsContainer" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="40" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="500*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Code Section-->
+            <RichTextBox x:Name="Code" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#FF323232" Foreground="White" Margin="1"/>
+            <!--Side Section-->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="2" Background="#FF494949">
+
+                <Label Content="Name" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <TextBox Name="Name" Height="20" Background="#FF323232" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+                <Label Content="Language" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <TextBox Name="Language" Height="20"  Background="#FF323232" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+                <!--Usage Section-->
+                <Label Content="Usage" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <RichTextBox x:Name="Usage" Height="100" Background="#FF323232" Foreground="White"/>
+                <!--Description Section-->
+                <Label Content="Description" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <RichTextBox x:Name="Description"  Height="100" Background="#FF323232" Foreground="White"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

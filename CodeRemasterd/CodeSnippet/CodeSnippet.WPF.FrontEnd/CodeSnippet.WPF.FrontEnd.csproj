@@ -82,6 +82,9 @@
     <Compile Include="Windows\CRUD\Tag.xaml.cs">
       <DependentUpon>Tag.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Items\SnippetItem.xaml.cs">
+      <DependentUpon>SnippetItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -90,9 +93,6 @@
     </Compile>
     <Compile Include="Windows\NavigationBars\NavBarSnippet.xaml.cs">
       <DependentUpon>NavBarSnippet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\NavigationBars\NavbarTest.xaml.cs">
-      <DependentUpon>NavbarTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Pages\SnippetsPage.xaml.cs">
       <DependentUpon>SnippetsPage.xaml</DependentUpon>
@@ -127,6 +127,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Items\SnippetItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -136,10 +140,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\NavigationBars\NavBarSnippet.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\NavigationBars\NavbarTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,6 +1,8 @@
 ﻿using CodeSnippet.Data;
 using CodeSnippet.Data.Converter;
 using CodeSnippet.Data.Database.Internal;
+using CodeSnippet.WPF.FrontEnd.Windows.Items;
+using CodeSnippet.WPF.FrontEnd.Windows.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,10 +26,12 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
     public partial class NavBarSnippet : UserControl
     {
         bool startup = false;
+        SnippetsPage Page;
 
-        public NavBarSnippet()
+        public NavBarSnippet(SnippetsPage page)
         {
             InitializeComponent();
+            Page = page;
 
             SetUI.DatesToCombobox(DateType);
             SetUI.CodeLanguageToCombobox(Language);
@@ -65,6 +69,8 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
         //Filter all the CodeSnippeds by the asigned Values
         private void FilterCodeSnippeds()
         {
+            var bc = new BrushConverter();
+
             //Give all filter values and recieve a list with Items
             List<SnippetInfo> snippets = DbSnippets.GetFilteredSnippeds(
             SearchBox.Text,
@@ -77,11 +83,13 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
             for (int i = 0; i < snippets.Count; i++)
                 items.Add(new SnippetUI(snippets[i]._Name, DbCodeLanguage.ToString(snippets[i]._LanguageID)));
 
-            string s = null;
-
+            Page.Containerr.Children.Clear();
             foreach (SnippetInfo i in snippets)
-                s += "Name: " + i._Name + " Language: " + DbCodeLanguage.ToString(i._LanguageID) + "\n";
-            MessageBox.Show(s);
+            {
+                SnippetItem item = new SnippetItem(i, Page);
+                item.Width = Page.Containerr.Width;
+                Page.Containerr.Children.Add(item);
+            }
         }
     }
 }

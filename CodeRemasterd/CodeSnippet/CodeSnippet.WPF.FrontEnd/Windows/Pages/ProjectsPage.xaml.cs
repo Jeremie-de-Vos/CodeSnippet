@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
+namespace CodeSnippet.WPF.FrontEnd.Windows.Pages
 {
     /// <summary>
-    /// Interaction logic for NavbarTest.xaml
+    /// Interaction logic for ProjectsPage.xaml
     /// </summary>
-    public partial class NavbarTest : UserControl
+    public partial class ProjectsPage : UserControl
     {
-        public NavbarTest()
+        public ProjectsPage()
         {
             InitializeComponent();
         }

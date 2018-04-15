@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\App.xaml
-121999699128
+12-311276202
 
-22-189418991
+221950612811
 751661633442
-MainWindow.xaml;Windows\CRUD\CodeLanguage.xaml;Windows\CRUD\ExternalDatabase.xaml;Windows\CRUD\Snippet.xaml;Windows\CRUD\Tag.xaml;Windows\Login.xaml;Windows\MainView.xaml;Windows\NavigationBars\NavBarSnippet.xaml;Windows\NavigationBars\NavbarTest.xaml;Windows\Pages\SnippetsPage.xaml;Windows\Pages\test.xaml;Windows\Register.xaml;
+MainWindow.xaml;Windows\CRUD\CodeLanguage.xaml;Windows\CRUD\ExternalDatabase.xaml;Windows\CRUD\Snippet.xaml;Windows\CRUD\Tag.xaml;Windows\Items\SnippetItem.xaml;Windows\Login.xaml;Windows\MainView.xaml;Windows\NavigationBars\NavBarSnippet.xaml;Windows\Pages\ProjectsPage.xaml;Windows\Pages\SnippetsPage.xaml;Windows\Register.xaml;
 
-False
+True
 

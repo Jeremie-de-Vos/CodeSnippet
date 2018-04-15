@@ -25,13 +25,20 @@ namespace CodeSnippet.WPF.FrontEnd.Windows
         {
             InitializeComponent();
             this.WindowState = WindowState.Maximized;
+        }
 
-            NavBarSnippet nav = new NavBarSnippet();
-            NavigationBar.Children.Add(nav);
-
+        private void NavSnippet_Click(object sender, RoutedEventArgs e)
+        {
             SnippetsPage snip = new SnippetsPage();
             Contentt.Children.Add(snip);
+            snip.Width = Contentt.Width;
+            snip.Height = Contentt.Height;
+
+            NavBarSnippet nav = new NavBarSnippet(snip);
+            NavigationBar.Children.Add(nav);
         }
+
+
         //Set User name information Example: Name, Email
     }
 }
