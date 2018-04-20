@@ -22,11 +22,9 @@
 
 
     <StackPanel Background="#FF343232" Orientation="Horizontal">
-        <Button Name="NewSnippet" Content="+ New Snipped" Width="154" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" OpacityMask="Black" Background="{x:Null}"/>
         <TextBox Name="SearchBox" VerticalContentAlignment="Center" TextWrapping="NoWrap" Width="203" FontSize="14" TextAlignment="Center" BorderThickness="0" Background="#FF545151" KeyDown="SearchBox_KeyDown"/>
         <ComboBox Name="Language" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="160" Background="#FF343232" SelectionChanged="Languages_SelectionChanged"/>
         <ComboBox Name="SearchType" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="160" Background="#FF343232" SelectionChanged="Type_SelectionChanged"/>
         <ComboBox Name="DateType" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="160" Background="#FF323232" SelectionChanged="DataeType_SelectionChanged"/>
-        <TextBox Name="TagFilter" VerticalContentAlignment="Center" TextWrapping="NoWrap" Width="203" FontSize="14" TextAlignment="Center" Background="#FF545151"/>
     </StackPanel>
 </UserControl>

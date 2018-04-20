@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeSnippet.Data.General;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,21 @@ namespace CodeSnippet.WPF.FrontEnd.Windows
         public Login()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+
+        private void Login_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Control[] c = {LoginName_txt,Password_txt};
+            if (ControlState.Execute(c, ControlStateVisuals.Colored))
+                LoginHandler.LoginNow(LoginName_txt.Text, Password_txt.Text, this);
+        }
+
+        private void Register_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Register wd = new Register();
+            wd.Show();
+            this.Close();
         }
     }
 }

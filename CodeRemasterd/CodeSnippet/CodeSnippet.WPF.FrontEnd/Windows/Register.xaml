@@ -23,8 +23,8 @@
             <Label Content="Password:" Canvas.Left="37" Canvas.Top="245" Foreground="#FFFAF8F8" FontWeight="Bold"/>
             <Label Content="Pass Again:" Canvas.Left="29" Canvas.Top="281" Foreground="#FFFAF8F8" FontWeight="Bold"/>
 
-            <Button x:Name="Register_btn" Content="Register" Width="204" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Canvas.Left="119" Canvas.Top="366"/>
-            <Button x:Name="Back_btn" Content="Back" Width="100" Height="25" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF252323"  Canvas.Left="167" Canvas.Top="411" BorderThickness="0,0,0,1"/>
+            <Button x:Name="Register_btn" Content="Register" Width="204" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Canvas.Left="119" Canvas.Top="366" Click="Register_btn_Click"/>
+            <Button x:Name="Back_btn" Content="Back" Width="100" Height="25" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF252323"  Canvas.Left="167" Canvas.Top="411" BorderThickness="0,0,0,1" Click="Back_btn_Click"/>
         </Canvas>
     </Grid>
 </Window>

@@ -92,14 +92,12 @@ namespace CodeSnippet.Data.Database.Internal
                             SortDescending(Temp);
                             break;
                     }
-
                 }
-                //Tag filter
             }
 
             //Close Connection
             connection.Close();
-
+            
             //Return Temp List
             return Temp;
         }

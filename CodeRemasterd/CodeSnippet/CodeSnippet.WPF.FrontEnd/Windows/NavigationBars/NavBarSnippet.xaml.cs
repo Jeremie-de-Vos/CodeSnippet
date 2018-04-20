@@ -1,6 +1,7 @@
 ﻿using CodeSnippet.Data;
 using CodeSnippet.Data.Converter;
 using CodeSnippet.Data.Database.Internal;
+using CodeSnippet.WPF.FrontEnd.Windows.CRUD;
 using CodeSnippet.WPF.FrontEnd.Windows.Items;
 using CodeSnippet.WPF.FrontEnd.Windows.Pages;
 using System;
@@ -82,14 +83,18 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
             List<SnippetUI> items = new List<SnippetUI>();
             for (int i = 0; i < snippets.Count; i++)
                 items.Add(new SnippetUI(snippets[i]._Name, DbCodeLanguage.ToString(snippets[i]._LanguageID)));
+            
 
             Page.Containerr.Children.Clear();
             foreach (SnippetInfo i in snippets)
             {
-                SnippetItem item = new SnippetItem(i, Page);
-                item.Width = Page.Containerr.Width;
+                SnippetItem item = new SnippetItem(i, Page)
+                {
+                    Width = Page.Containerr.Width
+                };
                 Page.Containerr.Children.Add(item);
             }
+            Page.ViewMode = false;
         }
     }
 }

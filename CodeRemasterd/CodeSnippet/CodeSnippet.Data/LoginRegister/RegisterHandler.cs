@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace CodeSnippet.Data.LoginRegister
 {
-    public class Register
+    public class RegisterHandler
     {
         //Register a New User
-        private void RegisterNow(RegisterInfo registerInfo)
+        public static void RegisterNow(RegisterInfo registerInfo)
         {
             using (MySqlConnection connection = DbInfo.Connection())
             {

@@ -35,6 +35,12 @@ namespace CodeSnippet.WPF.FrontEnd
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             UserInfo.SetUserInfo(1);
 
+            Login wd = new Login();
+            wd.Show();
+            this.Close();
+
+
+
             SetUI.DatesToCombobox(MySnipped_Date_Cmb);
             SetUI.CodeLanguageToCombobox(MySnipped_Languages_Cmb);
             SetUI.TypeToCombobox(MySnipped_Type_Cmb);
@@ -42,10 +48,6 @@ namespace CodeSnippet.WPF.FrontEnd
             MySnipped_Date_Cmb.SelectedIndex = 0;
             MySnipped_Type_Cmb.SelectedIndex = 0;
             MySnipped_Languages_Cmb.SelectedIndex = 0;
-
-            MainView wd = new MainView();
-            wd.Show();
-            this.Close();
 
             startup = true;
         }

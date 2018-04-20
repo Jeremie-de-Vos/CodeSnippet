@@ -5,6 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd.Windows.Pages"
              mc:Ignorable="d" Width="1424.8" Height="905.4">
+
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="#FFF7F1F1"/>
+            <Setter Property="BorderBrush" Value="#FF707070"/>
+            <Setter Property="Background" Value="#FF323232"/>
+            <Setter Property="OpacityMask" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -23,14 +36,12 @@
         
 
         <!--Code snippets-->
-        <StackPanel Name="MainContainer" CanVerticallyScroll="True" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="40" Background="#FF323232">
+        <StackPanel Name="MainContainer" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="40" Background="#FF323232">
             <StackPanel Height="30" Background="#FF494949">
                 <Label Content="Code Snippets" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             </StackPanel>
             <!--Item Container-->
-            <ScrollViewer Name="Scroller" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
-                <StackPanel Name="Containerr" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
-            </ScrollViewer>
+            <StackPanel Name="Containerr" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
         </StackPanel>
 
         
@@ -38,20 +49,18 @@
         
         
         <!--Code Viewer-->
-        <Grid Name="DetailsContainer" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="40" Background="AliceBlue">
+        <Grid Name="DetailsContainer" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="40" Background="AliceBlue">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
                 <RowDefinition Height="500*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             
             <!--Code Section-->
             <RichTextBox x:Name="Code" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#FF323232" Foreground="White" Margin="1"/>
+           
             <!--Side Section-->
             <StackPanel Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="2" Background="#FF494949">
 
@@ -67,6 +76,14 @@
                 <!--Description Section-->
                 <Label Content="Description" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <RichTextBox x:Name="Description"  Height="100" Background="#FF323232" Foreground="White"/>
+                <Canvas Height="17"/>
+
+                <!--Buttons Section-->
+                <Button Name="Action" Content="Actions" BorderBrush="LightGreen" Style="{DynamicResource Button}"/>
+                <Button Name="Delete" Content="Delete"  Style="{DynamicResource Button}" BorderBrush="OrangeRed"/>
+                <Button Name="Save" Content="New"  Style="{DynamicResource Button}" BorderBrush="HotPink"/>
+                <Button Name="New" Content="New"  Style="{DynamicResource Button}" BorderBrush="Purple"/>
+
             </StackPanel>
         </Grid>
     </Grid>

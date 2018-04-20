@@ -20,12 +20,37 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.Pages
     /// </summary>
     public partial class SnippetsPage : UserControl
     {
+
         public SnippetsPage()
         {
             InitializeComponent();
-            DetailsContainer.Height = this.Height;
-            MainContainer.MaxHeight = this.Height;
-            MainContainer.MinHeight = this.Height;
+            MainContainer.Height = this.Height;
+            ViewMode = false;
+        }
+
+        private bool _ViewMode;
+        public bool ViewMode
+        {
+            get { return _ViewMode; }
+            set
+            {
+                _ViewMode = value;
+                if (_ViewMode)
+                {
+                    New.Visibility = Visibility.Visible;
+                    New.Content = "Create New";
+                    Action.Content = "Apply";
+                    Delete.Visibility = Visibility.Visible;
+                    Save.Content = "Save";
+                }
+                else
+                {
+                    New.Visibility = Visibility.Collapsed;
+                    Action.Content = "Clear";
+                    Delete.Visibility = Visibility.Collapsed;
+                    Save.Content = "Save as New";
+                }
+            }
         }
     }
 }

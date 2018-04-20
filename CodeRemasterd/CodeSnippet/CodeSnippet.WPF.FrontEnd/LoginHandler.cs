@@ -92,7 +92,7 @@ namespace CodeSnippet.WPF.FrontEnd
             DB_Info.Clear();
 
             //new table
-            Login mainwindows = new Login();
+            MainView mainwindows = new MainView();
             DB_Info.Add(new LoginDB("users", mainwindows, "ID", "Firstname", "Password"));
 
         }
@@ -101,9 +101,8 @@ namespace CodeSnippet.WPF.FrontEnd
         {
             switch (Info.WinodowToOpen)
             {
-                case Login main:
-                    Login k = new Login();
-                    //k.SetUserInfo();
+                case MainView main:
+                    MainView k = new MainView();
                     k.Show();
                     break;
             }

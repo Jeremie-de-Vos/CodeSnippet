@@ -76,9 +76,6 @@
     <Compile Include="Windows\CRUD\ExternalDatabase.xaml.cs">
       <DependentUpon>ExternalDatabase.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\CRUD\Snippet.xaml.cs">
-      <DependentUpon>Snippet.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\CRUD\Tag.xaml.cs">
       <DependentUpon>Tag.xaml</DependentUpon>
     </Compile>
@@ -94,11 +91,11 @@
     <Compile Include="Windows\NavigationBars\NavBarSnippet.xaml.cs">
       <DependentUpon>NavBarSnippet.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Pages\ProjectsPage.xaml.cs">
+      <DependentUpon>ProjectsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Pages\SnippetsPage.xaml.cs">
       <DependentUpon>SnippetsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Pages\test.xaml.cs">
-      <DependentUpon>test.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
@@ -116,10 +113,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\CRUD\ExternalDatabase.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\CRUD\Snippet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,11 +136,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\Pages\SnippetsPage.xaml">
+    <Page Include="Windows\Pages\ProjectsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\Pages\test.xaml">
+    <Page Include="Windows\Pages\SnippetsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

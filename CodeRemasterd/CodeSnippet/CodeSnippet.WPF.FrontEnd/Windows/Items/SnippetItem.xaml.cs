@@ -51,6 +51,8 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.Items
 
             Page.Name.Text = Info._Name;
             Page.Language.Text = DbCodeLanguage.ToString(Info._LanguageID);
+
+            Page.ViewMode = true;
         }
     }
 }

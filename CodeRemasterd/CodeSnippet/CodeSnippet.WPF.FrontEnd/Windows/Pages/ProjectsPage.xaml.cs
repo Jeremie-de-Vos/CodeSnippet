@@ -23,6 +23,11 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.Pages
         public ProjectsPage()
         {
             InitializeComponent();
+
+            MainContainer.MaxHeight = this.Height;
+            MainContainer.MinHeight = this.Height;
+
+            
         }
     }
 }

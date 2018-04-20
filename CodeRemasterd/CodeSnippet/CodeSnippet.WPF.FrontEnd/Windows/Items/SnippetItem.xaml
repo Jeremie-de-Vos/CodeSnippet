@@ -15,7 +15,6 @@
             <Setter Property="BorderBrush" Value="#FF707070"/>
             <Setter Property="Background" Value="#FF323232"/>
             <Setter Property="OpacityMask" Value="Black"/>
-            <Setter Property="Width" Value="100"/>
         </Style>
     </UserControl.Resources>
 
@@ -25,9 +24,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <!--Labels-->
         <Label Name="Name" Content="Name" Grid.Column="0" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
@@ -35,7 +32,5 @@
         <Label Name="CreateDate" Content="Date" Grid.Column="2" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <!--Buttons-->
         <Button Name="View" Content="View" Style="{DynamicResource Button}" Grid.Column="3" Click="View_Click" />
-        <Button Name="Delete" Content="Delete" Style="{DynamicResource Button}" Grid.Column="7"/>
-        <Button Name="Edit" Content="Edit" Style="{DynamicResource Button}" Grid.Column="4"/>
     </Grid>
 </UserControl>

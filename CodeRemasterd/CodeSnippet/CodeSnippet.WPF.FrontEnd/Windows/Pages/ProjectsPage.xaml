@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CodeSnippet.WPF.FrontEnd.Windows.Pages"
-             mc:Ignorable="d" 
              mc:Ignorable="d" Width="1424.8" Height="905.4">
-    <Grid>
+    <Grid Name="MainContainer" >
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -18,7 +18,38 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
-        
+
+        <!--New Projects-->
+        <StackPanel CanVerticallyScroll="True" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="2" Margin="40" Background="#FF323232">
+            <StackPanel Height="30" Background="#FF494949">
+                <Label Content="New Projects" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <!--Item Container-->
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
+                <StackPanel Name="NewProjectsContainer" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
+            </ScrollViewer>
+        </StackPanel>
+
+        <!--Completed Projects-->
+        <StackPanel CanVerticallyScroll="True" Grid.Row="2" Grid.RowSpan="1" Grid.ColumnSpan="2" Margin="40" Background="#FF323232">
+            <StackPanel Height="30" Background="#FF494949">
+                <Label Content="Completed Projects" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <!--Item Container-->
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
+                <StackPanel Name="CompletedContainer" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
+            </ScrollViewer>
+        </StackPanel>
+
+        <!--Current Projects-->
+        <StackPanel CanVerticallyScroll="True" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="2" Margin="40" Background="#FF323232">
+            <StackPanel Height="30" Background="#FF494949">
+                <Label Content="Current Projects" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <!--Item Container-->
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
+                <StackPanel Name="AllCurrentProjectsContainer" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
+            </ScrollViewer>
+        </StackPanel>
     </Grid>
 </UserControl>

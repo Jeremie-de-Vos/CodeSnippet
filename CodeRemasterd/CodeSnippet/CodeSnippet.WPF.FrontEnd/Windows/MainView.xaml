@@ -25,8 +25,8 @@
             <Setter Property="FontSize" Value="14"/>
         </Style>
     </Window.Resources>
-    
-    
+
+
     <Grid Background="#FF252323">
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
@@ -49,7 +49,7 @@
         <!--SideBar-->
         <StackPanel Grid.Row="1" Grid.Column="0" Background="#FF1E1E1F">
             <!--UserInfo-->
-            <Grid Height="200">
+            <Grid Height="180">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -76,17 +76,16 @@
             <Button Name="NavProfile" Content="Profile" Style="{StaticResource NavigationButton}"/>
             <Button Name="NavSettings" Content="Settings" Style="{StaticResource NavigationButton}"/>
             <Canvas Height="7"/>
-            <Button Name="NavProjects" Content="Projects" Style="{StaticResource NavigationButton}"/>
+            <Button Name="NavProjects" Content="Projects" Style="{StaticResource NavigationButton}" Click="NavProjects_Click"/>
             <Button Name="NavSnippet" Content="Snippets" Style="{StaticResource NavigationButton}" Click="NavSnippet_Click"/>
             <Canvas Height="7"/>
             <Button Name="NavDashBoard" Content="DashBoard" Style="{StaticResource NavigationButton}"/>
             <Button Name="NavMyData" Content="MyData" Style="{StaticResource NavigationButton}"/>
             <Button Name="NavFiles" Content="Files" Style="{StaticResource NavigationButton}"/>
+            <Calendar Background="#FF111010" Foreground="#FFC07E7E"/>
         </StackPanel>
 
         <!--Content-->
-        <StackPanel Name="Contentt" Grid.Row="1" Grid.Column="1">
-
-        </StackPanel>
+        <StackPanel Name="Contentt" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Window>

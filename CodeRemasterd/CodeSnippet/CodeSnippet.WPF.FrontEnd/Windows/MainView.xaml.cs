@@ -1,18 +1,7 @@
 ﻿using CodeSnippet.WPF.FrontEnd.Windows.NavigationBars;
 using CodeSnippet.WPF.FrontEnd.Windows.Pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace CodeSnippet.WPF.FrontEnd.Windows
 {
@@ -29,6 +18,9 @@ namespace CodeSnippet.WPF.FrontEnd.Windows
 
         private void NavSnippet_Click(object sender, RoutedEventArgs e)
         {
+            Contentt.Children.Clear();
+            NavigationBar.Children.Clear();
+
             SnippetsPage snip = new SnippetsPage();
             Contentt.Children.Add(snip);
             snip.Width = Contentt.Width;
@@ -36,6 +28,17 @@ namespace CodeSnippet.WPF.FrontEnd.Windows
 
             NavBarSnippet nav = new NavBarSnippet(snip);
             NavigationBar.Children.Add(nav);
+        }
+
+        private void NavProjects_Click(object sender, RoutedEventArgs e)
+        {
+            Contentt.Children.Clear();
+            NavigationBar.Children.Clear();
+
+            ProjectsPage page = new ProjectsPage();
+            Contentt.Children.Add(page);
+            page.Width = Contentt.Width;
+            page.Height = Contentt.Height;
         }
 
 

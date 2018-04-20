@@ -11,8 +11,8 @@
         <Canvas>
             <TextBox Name="LoginName_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="118" Canvas.Top="160"/>
             <TextBox Name="Password_txt" Height="30"  Width="203" FontSize="14" VerticalContentAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" BorderThickness="1" Background="#FF343232" SelectionBrush="#FFEBDF30" Foreground="#FFF3F2F2" HorizontalAlignment="Right" Canvas.Left="118" Canvas.Top="203"/>
-            <Button x:Name="Login_btn" Content="Login" Width="204" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Canvas.Left="118" Canvas.Top="285"/>
-            <Button x:Name="Register_btn" Content="Register" Width="99" Height="25" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF252323"  Canvas.Left="167" Canvas.Top="330" BorderThickness="0,0,0,1"/>
+            <Button x:Name="Login_btn" Content="Login" Width="204" Height="40" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF323232" OpacityMask="Black" Canvas.Left="118" Canvas.Top="285" Click="Login_btn_Click"/>
+            <Button x:Name="Register_btn" Content="Register" Width="99" Height="25" FontSize="14" Foreground="#FFF7F1F1" BorderBrush="#FF707070" Background="#FF252323"  Canvas.Left="167" Canvas.Top="330" BorderThickness="0,0,0,1" Click="Register_btn_Click"/>
         </Canvas>
     </Grid>
 </Window>
