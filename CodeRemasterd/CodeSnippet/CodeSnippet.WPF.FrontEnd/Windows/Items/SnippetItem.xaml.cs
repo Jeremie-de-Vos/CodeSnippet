@@ -1,4 +1,6 @@
-﻿using CodeSnippet.Data.Database.Internal;
+﻿using CodeSnippet.Data;
+using CodeSnippet.Data.Database.Internal;
+using CodeSnippet.WPF.FrontEnd.Windows.NavigationBars;
 using CodeSnippet.WPF.FrontEnd.Windows.Pages;
 using System;
 using System.Collections.Generic;
@@ -24,8 +26,10 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.Items
     {
         SnippetInfo Info;
         SnippetsPage Page;
+        NavBarSnippet Navbar;
 
-        public SnippetItem(SnippetInfo info, SnippetsPage page)
+        //Main
+        public SnippetItem(SnippetInfo info, SnippetsPage page, NavBarSnippet navbar)
         {
             InitializeComponent();
 
@@ -35,8 +39,9 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.Items
             Name.Content = info._Name;
             Language.Content = DbCodeLanguage.ToString(info._LanguageID);
             CreateDate.Content = info._CreateDate;
+            Navbar = navbar;
         }
-
+        //View-Button-Click
         private void View_Click(object sender, RoutedEventArgs e)
         {
             //Set Code,Usage,Name,Description enz....
@@ -50,9 +55,13 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.Items
             Page.Usage.Document.Blocks.Add(new Paragraph(new Run(Info._UsageExample)));
 
             Page.Name.Text = Info._Name;
-            Page.Language.Text = DbCodeLanguage.ToString(Info._LanguageID);
-
+            Page.Language.Items.Clear();
+            SetUI.CodeLanguageToCombobox(Page.Language);
+            Page.Language.SelectedItem = DbCodeLanguage.ToString(Info._LanguageID);
+                
             Page.ViewMode = true;
+            Page.currentsnippet = Info;
+            Page.Nav = Navbar;
         }
     }
 }

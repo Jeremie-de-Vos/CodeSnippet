@@ -68,7 +68,7 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
         }
 
         //Filter all the CodeSnippeds by the asigned Values
-        private void FilterCodeSnippeds()
+        public void FilterCodeSnippeds()
         {
             var bc = new BrushConverter();
 
@@ -88,7 +88,7 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
             Page.Containerr.Children.Clear();
             foreach (SnippetInfo i in snippets)
             {
-                SnippetItem item = new SnippetItem(i, Page)
+                SnippetItem item = new SnippetItem(i, Page, this)
                 {
                     Width = Page.Containerr.Width
                 };

@@ -68,7 +68,7 @@
                 <TextBox Name="Name" Height="20" Background="#FF323232" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 
                 <Label Content="Language" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <TextBox Name="Language" Height="20"  Background="#FF323232" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <ComboBox Name="Language" Height="20"  Background="#FF323232"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 
                 <!--Usage Section-->
                 <Label Content="Usage" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
@@ -79,10 +79,10 @@
                 <Canvas Height="17"/>
 
                 <!--Buttons Section-->
-                <Button Name="Action" Content="Actions" BorderBrush="LightGreen" Style="{DynamicResource Button}"/>
-                <Button Name="Delete" Content="Delete"  Style="{DynamicResource Button}" BorderBrush="OrangeRed"/>
-                <Button Name="Save" Content="New"  Style="{DynamicResource Button}" BorderBrush="HotPink"/>
-                <Button Name="New" Content="New"  Style="{DynamicResource Button}" BorderBrush="Purple"/>
+                <Button Name="Action" Content="Actions" BorderBrush="LightGreen" Style="{DynamicResource Button}" Click="Action_Click"/>
+                <Button Name="Delete" Content="Delete"  Style="{DynamicResource Button}" BorderBrush="OrangeRed" Click="Delete_Click"/>
+                <Button Name="Save" Content="Save"  Style="{DynamicResource Button}" BorderBrush="HotPink" Click="Save_Click"/>
+                <Button Name="New" Content="New"  Style="{DynamicResource Button}" BorderBrush="Purple" Click="New_Click"/>
 
             </StackPanel>
         </Grid>

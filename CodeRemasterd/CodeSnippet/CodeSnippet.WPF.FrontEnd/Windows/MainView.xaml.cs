@@ -16,6 +16,7 @@ namespace CodeSnippet.WPF.FrontEnd.Windows
             this.WindowState = WindowState.Maximized;
         }
 
+        //Side-Menu-Handling
         private void NavSnippet_Click(object sender, RoutedEventArgs e)
         {
             Contentt.Children.Clear();
@@ -29,7 +30,6 @@ namespace CodeSnippet.WPF.FrontEnd.Windows
             NavBarSnippet nav = new NavBarSnippet(snip);
             NavigationBar.Children.Add(nav);
         }
-
         private void NavProjects_Click(object sender, RoutedEventArgs e)
         {
             Contentt.Children.Clear();

@@ -256,17 +256,18 @@ namespace CodeSnippet.Data.Database.Internal
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText =
                         "UPDATE `codesnippets` SET " +
-                        "`TagCollectionID`=@TagCollectionID," +
-                        "`Name`=@Name," +
-                        "`Code`=@Code," +
-                        "`CodeEditDate`=@CodeEditDate," +
-                        "`UsageExample`=@UsageExample," +
-                        "`UsageEditDate`=@UsageEditDate," +
-                        "`Description`=@Description," +
-                        "`DescriptionEditDate`=@DescriptionEditDate," +
-                        "`LanguageID`=@LanguageID," +
+                        "`TagCollectionID`= @TagCollectionID," +
+                        "`Name`= @Name," +
+                        "`Code`= @Code," +
+                        "`CodeEditDate`= @CodeEditDate," +
+                        "`UsageExample`= @UsageExample," +
+                        "`UsageEditDate`= @UsageEditDate," +
+                        "`Description`= @Description," +
+                        "`DescriptionEditDate`= @DescriptionEditDate," +
+                        "`LanguageID`= @LanguageID " +
                         "WHERE `ID`= @ID";
 
+                    cmd.Parameters.AddWithValue("@ID", snippetInfo._ID);
                     cmd.Parameters.AddWithValue("@TagCollectionID", snippetInfo._TagCollectionID);
                     cmd.Parameters.AddWithValue("@Name", snippetInfo._Name);
                     cmd.Parameters.AddWithValue("@Code", snippetInfo._Code);
