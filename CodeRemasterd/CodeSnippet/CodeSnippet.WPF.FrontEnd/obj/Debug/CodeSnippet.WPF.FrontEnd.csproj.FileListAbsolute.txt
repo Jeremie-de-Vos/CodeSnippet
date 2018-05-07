@@ -64,3 +64,5 @@ D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeS
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Items\SnippetItem.baml
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Pages\ProjectsPage.g.cs
 D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Pages\ProjectsPage.baml
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Items\CollectionItem.g.cs
+D:\Visual-Studio Projects\Mysnippets\CodeSnippet\CodeRemasterd\CodeSnippet\CodeSnippet.WPF.FrontEnd\obj\Debug\Windows\Items\CollectionItem.baml

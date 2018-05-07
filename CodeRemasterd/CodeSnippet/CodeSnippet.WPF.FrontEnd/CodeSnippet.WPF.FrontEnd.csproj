@@ -79,6 +79,9 @@
     <Compile Include="Windows\CRUD\Tag.xaml.cs">
       <DependentUpon>Tag.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Items\CollectionItem.xaml.cs">
+      <DependentUpon>CollectionItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Items\SnippetItem.xaml.cs">
       <DependentUpon>SnippetItem.xaml</DependentUpon>
     </Compile>
@@ -117,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\CRUD\Tag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Items\CollectionItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

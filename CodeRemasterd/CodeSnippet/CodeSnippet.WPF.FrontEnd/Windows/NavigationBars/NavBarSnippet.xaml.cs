@@ -42,6 +42,11 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
             SearchType.SelectedIndex = 0;
             Language.SelectedIndex = 0;
             startup = true;
+
+
+            Functionality.Items.Add("Single");
+            Functionality.Items.Add("Collection");
+            Functionality.SelectedIndex = 0;
         }
 
         //-------------------------Filters------------------------------
@@ -63,8 +68,18 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
         }
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
-                FilterCodeSnippeds();
+            if (Functionality.SelectedItem == "Single")
+            {
+                if (e.Key == Key.Enter)
+                {
+                    FilterCodeSnippeds();
+                }
+            }
+            else
+                if (e.Key == Key.Enter)
+            {
+                FilterCollections();
+            }
         }
 
         //Filter all the CodeSnippeds by the asigned Values
@@ -95,6 +110,35 @@ namespace CodeSnippet.WPF.FrontEnd.Windows.NavigationBars
                 Page.Containerr.Children.Add(item);
             }
             Page.ViewMode = false;
+        }
+        public void FilterCollections()
+        {
+            Page.Containerr.Children.Clear();
+            foreach (CollectionCompleteInfo i in DbSnippetCollection.GetAllCollections())
+            {
+                CollectionItem item = new CollectionItem(i, Page, this)
+                {
+                    Width = Page.Containerr.Width
+                };
+                Page.Containerr.Children.Add(item);
+            }
+            Page.ViewMode = false;
+        }
+        //Functionality-selectedindex-0changed
+        private void Functionality_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(Functionality.SelectedItem == "Single")
+            {
+                Language.Visibility = Visibility.Visible;
+                SearchType.Visibility = Visibility.Visible;
+                DateType.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Language.Visibility = Visibility.Collapsed;
+                SearchType.Visibility = Visibility.Collapsed;
+                DateType.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

@@ -72,10 +72,10 @@
 
                 <!--Usage Section-->
                 <Label Content="Usage" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <RichTextBox x:Name="Usage" Height="100" Background="#FF323232" Foreground="White"/>
+                <RichTextBox Name="Usage" Height="100" Background="#FF323232" Foreground="White"/>
                 <!--Description Section-->
                 <Label Content="Description" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <RichTextBox x:Name="Description"  Height="100" Background="#FF323232" Foreground="White"/>
+                <RichTextBox Name="Description"  Height="100" Background="#FF323232" Foreground="White"/>
                 <Canvas Height="17"/>
 
                 <!--Buttons Section-->

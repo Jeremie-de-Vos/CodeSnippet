@@ -186,7 +186,7 @@ namespace CodeSnippet.Data.Database.Internal
             if (reader.Read())
             {
                 //Save a new Temporary Snippet
-                SnippetInfo TempSnippet = (new SnippetInfo(
+                return new SnippetInfo(
                                     int.Parse(reader["ID"].ToString()),
                                     int.Parse(reader["UserID"].ToString()),
                                     int.Parse(reader["TagCollectionID"].ToString()),
@@ -199,9 +199,8 @@ namespace CodeSnippet.Data.Database.Internal
                                     DateTime.Parse(reader["DescriptionEditDate"].ToString()),
                                     int.Parse(reader["LanguageID"].ToString()),
                                     DateTime.Parse(reader["CreateDate"].ToString())
-                                    ));
+                                    );
             }
-
             //Return value
             return Temp;
         }
